@@ -96,23 +96,47 @@
 </head>
 <body class="bg-rose-50 text-slate-800 antialiased">
   <!-- ======= Header / Navbar ======= -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 group" aria-label="Homepage">
-        <div class="h-9 w-9 rounded-2xl bg-rose-600 text-white grid place-items-center shadow-soft group-hover:scale-105 transition"><img src="./LOGO.png" alt=""></div>
-        <div>
-          <p class="font-serif text-lg leading-tight">Linda Arte Ateliê</p>
-          <p class="text-xs text-slate-500 -mt-1">festa • mesa posta • decoração</p>
+<!-- ======= HEADER (maior, logo destacada) ======= -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-rose-200/50 shadow-sm">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between">
+    
+    <!-- Brand -->
+    <a href="#" class="flex items-center gap-4 group" aria-label="Homepage">
+      <!-- LOGO maior + destaque -->
+      <div class="relative">
+        <div class="h-14 w-14 md:h-20 md:w-20  grid place-items-center   group-hover:scale-105 transition">
+          <img src="./LOGO.png" alt="Linda Arte Ateliê" class="h-10 md:h-14 w-auto object-contain drop-shadow" />
         </div>
+        <!-- brilho suave -->
+        <span class="absolute inset-0 -z-10 blur-2xl rounded-3xl bg-rose-300/40"></span>
+      </div>
+
+      <div>
+        <p class="font-serif text-2xl md:text-3xl text-rose-900 leading-tight">Linda Arte Ateliê</p>
+        <p class="text-xs md:text-sm text-rose-700/80 -mt-1">festa • mesa posta • décor</p>
+      </div>
+    </a>
+
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center gap-7 text-[15px]">
+      <a href="#servicos" class="hover:text-rose-800">Serviços</a>
+      <a href="#galeria" class="hover:text-rose-800">Galeria</a>
+      <a href="#sobre" class="hover:text-rose-800">Sobre</a>
+      <a href="#contato" class="inline-flex items-center rounded-full px-4 py-2.5 font-semibold text-white bg-rose-600 shadow hover:opacity-90">
+        Orçamento
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#servicos" class="hover:text-brand-800">Serviços</a>
-        <a href="#galeria" class="hover:text-brand-800">Galeria</a>
-        <a href="#sobre" class="hover:text-brand-800">Sobre</a>
-        <a href="#contato" class="button-cta bg-rose-600 text-white hover:opacity-90">Orçamento</a>
-      </nav>
-    </div>
-  </header>
+    </nav>
+
+    <!-- Botão mobile (opcional) -->
+    <button class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-2xl bg-white/70 border border-rose-200 text-rose-700 shadow hover:bg-white"
+            aria-label="Abrir menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
 
   <!-- ======= Hero ======= -->
   <section class="relative overflow-hidden">
