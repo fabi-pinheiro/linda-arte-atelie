@@ -356,7 +356,7 @@
         <p class="mt-3 text-slate-600">Alguns registros de composições & detalhes.</p>
       </div>
 
-      <div class="mt-10 grid-auto-fit">
+      <div class="mt-10 grid-auto-fit" id="galeria-rotativa">
         <!-- Substitua pelos seus arquivos/imagens reais -->
         <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
           <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_3.jpg" alt="Festa na mesa" />
@@ -495,6 +495,132 @@
     </div>
   </div>
 
+<script>
+/**
+ * Rotator de 4 imagens com troca por lote (batch), shuffle/sequencial,
+ * pausa no hover/tab oculta, e pré-carregamento.
+ */
+(function ImageQuadRotator(){
+  // ============ CONFIG ============
+  const CFG = {
+    container: '#galeria-rotativa', // grade que já tem 4 <figure>
+    // Lista de TODAS as imagens disponíveis no seu acervo:
+    sources: [
+      './IMGS/image_1.jpg','./IMGS/image_2.jpg','./IMGS/image_3.jpg','./IMGS/image_4.jpg',
+      './IMGS/image_5.jpg','./IMGS/image_6.jpg','./IMGS/image_7.jpg','./IMGS/image_8.jpg',
+      './IMGS/image_9.jpg','./IMGS/image_10.jpg','./IMGS/image_11.jpg','./IMGS/image_12.jpg'
+    ],
+    intervalMs: 6000,          // <- troque o "X" aqui (em ms)
+    mode: 'shuffle',           // 'shuffle' ou 'sequential'
+    batchSize: 4,              // sempre 4
+    preloadAhead: 6,           // pré-carregar próximas N imagens
+    fadeMs: 450,               // duração da transição
+    fallback: 'https://euaa.europa.eu/sites/default/files/styles/width_600px/public/default_images/news-default-big.png?itok=NNXAZZTc'
+  };
+  // ============ /CONFIG ============
+
+  const $grid = document.querySelector(CFG.container);
+  if (!$grid) return console.warn('Rotator: container não encontrado:', CFG.container);
+
+  // Pega os 4 <img> existentes (reaproveitamos as <figure>)
+  const $imgs = Array.from($grid.querySelectorAll('img')).slice(0, CFG.batchSize);
+  if ($imgs.length < CFG.batchSize) {
+    return console.warn('Rotator: são necessários 4 <img> dentro da grade.');
+  }
+
+  // CSS suave (inline pra não depender de arquivo externo)
+  const style = document.createElement('style');
+  style.textContent = `
+    ${CFG.container} img { transition: opacity ${CFG.fadeMs}ms ease; opacity: 1; }
+    ${CFG.container} img.is-fading { opacity: 0; }
+  `;
+  document.head.appendChild(style);
+
+  // Utilitários
+  const shuffle = (arr) => arr
+    .map(v => [Math.random(), v])
+    .sort((a,b)=>a[0]-b[0])
+    .map(v => v[1]);
+
+  const uniqueNextBatch = (() => {
+    let index = 0;
+    let pool = CFG.mode === 'shuffle' ? shuffle([...CFG.sources]) : [...CFG.sources];
+
+    return () => {
+      // Recria pool se esgotar
+      if (index >= pool.length) {
+        pool = CFG.mode === 'shuffle' ? shuffle([...CFG.sources]) : [...CFG.sources];
+        index = 0;
+      }
+      // Evita “sobrar” menos de 4: reinicia pra não repetir imagens do mesmo lote
+      if (index + CFG.batchSize > pool.length) {
+        pool = CFG.mode === 'shuffle' ? shuffle([...CFG.sources]) : [...CFG.sources];
+        index = 0;
+      }
+      const batch = pool.slice(index, index + CFG.batchSize);
+      index += CFG.batchSize;
+      return batch;
+    };
+  })();
+
+  // Pré-carregamento
+  const preload = (urls) => {
+    urls.forEach(u => {
+      const img = new Image();
+      img.src = u;
+    });
+  };
+
+  // Troca com transição e fallback
+  const swapTo = (imgEl, newSrc) => {
+    return new Promise(resolve => {
+      imgEl.classList.add('is-fading');
+      const doSwap = () => {
+        imgEl.onload = () => { imgEl.classList.remove('is-fading'); resolve(); };
+        imgEl.onerror = () => { imgEl.src = CFG.fallback; imgEl.classList.remove('is-fading'); resolve(); };
+        imgEl.src = newSrc;
+      };
+      // espera metade do fade pra trocar o src (efeito mais suave)
+      setTimeout(doSwap, CFG.fadeMs * 0.5);
+    });
+  };
+
+  // Lote inicial: usa o que já está na página, sem piscar
+  // (se já tiverem data-src, honramos trocando pra src apenas no primeiro tick)
+  // Em seguida, agenda as trocas
+  let timer = null;
+  let paused = false;
+
+  const tick = async () => {
+    if (paused) return;
+    const batch = uniqueNextBatch();
+    // Preload das próximas imagens
+    preload(batch.slice(0, CFG.preloadAhead));
+
+    // Troca as 4 com transição
+    await Promise.all($imgs.map((el, i) => swapTo(el, batch[i])));
+  };
+
+  // Pausa no hover e quando a aba estiver oculta (economia de CPU)
+  const onVisibility = () => { paused = document.hidden; };
+  document.addEventListener('visibilitychange', onVisibility);
+  $grid.addEventListener('mouseenter', () => { paused = true; });
+  $grid.addEventListener('mouseleave', () => { paused = false; });
+
+  // Se as imagens iniciais usam data-src, carregue-as já
+  $imgs.forEach(img => {
+    if (img.dataset && img.dataset.src && !img.src) {
+      img.src = img.dataset.src;
+      img.addEventListener('error', () => { img.src = CFG.fallback; }, { once: true });
+    }
+  });
+
+  // Inicia o ciclo
+  timer = setInterval(tick, CFG.intervalMs);
+  // dispara a primeira troca depois de 1 intervalo (pra não piscar logo ao abrir)
+  // Se quiser trocar imediatamente na carga, chame tick() aqui.
+})();
+</script>
 
 <!-- 1) Script MÓDULO: importa diretamente da CDN (ESM) -->
 <script type="module">
