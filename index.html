@@ -93,6 +93,87 @@
     .whatsapp-panel { position:fixed; right:90px; bottom:18px; z-index:60; width:min(360px,90vw); max-height:70vh; overflow:hidden; border-radius:16px }
     .lazy { filter: blur(10px); transition: filter .5s ease }
     .lazy.loaded { filter: blur(0) }
+    /* ================== TEMA DE NATAL ================== */
+.christmas { --xmas-red:#b91c1c; --xmas-green:#065f46; --xmas-gold:#f59e0b; --xmas-snow:#ffffff; }
+
+/* Header com tom translúcido e borda dourada */
+.christmas header.sticky { background: rgba(255,255,255,.85); border-color: rgba(245,158,11,.35); }
+
+/* Títulos e destaques */
+.christmas h1, .christmas h2, .christmas h3, .christmas .font-serif { color: var(--xmas-green) !important; }
+.christmas .text-rose-900 { color: var(--xmas-green) !important; }
+.christmas .text-rose-700, .christmas .text-rose-700\/80 { color: #166534 !important; }
+
+/* Botões CTA ficam “natalinos” */
+.christmas .button-cta { 
+  background-image: linear-gradient(135deg,var(--xmas-green),#0f766e);
+  color:#fff!important;
+  border:none;
+  box-shadow: 0 10px 30px rgba(6,95,70,.25);
+}
+.christmas a.button-cta.bg-rose-600 { background-image: linear-gradient(135deg,var(--xmas-red),#dc2626); }
+.christmas .button-cta:hover { filter: saturate(1.1) brightness(1.02); }
+
+/* Badges e bordas com dourado */
+.christmas .border-rose-200, 
+.christmas .border-rose-100 { border-color: rgba(245,158,11,.35) !important; }
+.christmas .bg-rose-50, 
+.christmas .bg-rose-50\/60 { background-color: rgba(245,158,11,.06) !important; }
+
+/* Hero: gradiente festivo */
+.christmas section.relative > .absolute.inset-0 > .absolute.inset-0 {
+  background: linear-gradient(120deg, rgba(185,28,28,.28), rgba(245,158,11,.22), rgba(6,95,70,.28));
+}
+
+/* Guirlanda decorativa no topo das seções */
+.christmas .section-garland {
+  position: relative;
+  isolation: isolate;
+}
+.christmas .section-garland::before {
+  content:"";
+  position:absolute; inset-inline:0; top:-18px; height:36px; z-index:10;
+  background:
+    radial-gradient(circle at 10% 50%, var(--xmas-green) 6px, transparent 7px) 0 50%/36px 36px repeat-x,
+    radial-gradient(circle at 10% 50%, var(--xmas-red) 6px, transparent 7px) 18px 50%/36px 36px repeat-x;
+  filter: drop-shadow(0 6px 6px rgba(0,0,0,.08));
+}
+
+/* Cartões com “edge” festivo */
+.christmas .shadow-soft { box-shadow: 0 12px 30px rgba(6,95,70,.08), 0 2px 10px rgba(185,28,28,.05) !important; }
+.christmas .rounded-2xl { border: 1px solid rgba(6,95,70,.07); }
+
+/* WhatsApp bubble com laço */
+.christmas .whatsapp-bubble button { 
+  box-shadow: 0 0 0 4px rgba(245,158,11,.35); 
+}
+.christmas .whatsapp-bubble button::after {
+  content:"🎀"; position:absolute; translate: 12px -12px; font-size:14px;
+}
+
+/* Rodapé sutil */
+.christmas footer { border-color: rgba(245,158,11,.25) !important; }
+
+/* --------- NEVE (overlay) --------- */
+.snow-overlay { pointer-events:none; position:fixed; inset:0; z-index:30; overflow:hidden; }
+.snowflake {
+  position:absolute; top:-10px; width:6px; height:6px; border-radius:50%; background: var(--xmas-snow);
+  opacity:.9; filter: drop-shadow(0 0 4px rgba(255,255,255,.9));
+  animation-name: fall, sway; animation-duration: 10s, 6s; animation-iteration-count: infinite; 
+  animation-timing-function: linear, ease-in-out;
+}
+@keyframes fall { to { transform: translateY(110vh); } }
+@keyframes sway { 
+  0%   { margin-left:0 } 
+  50%  { margin-left:20px } 
+  100% { margin-left:0 } 
+}
+
+/* Reduzir intensidade de neve em telas muito pequenas */
+@media (max-width: 480px){
+  .snowflake { opacity:.75; animation-duration: 9s, 5.5s; }
+}
+
   </style>
 </head>
 <body class="bg-rose-50 text-slate-800 antialiased" style="overflow-x: hidden">
