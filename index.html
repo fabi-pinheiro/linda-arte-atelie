@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- ======= Base ======= -->
   <meta charset="utf-8" />
   <link rel="icon" type="image/png" href="./LOGO.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,41 +11,33 @@
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="theme-color" content="#f472b6" />
 
-  <!-- ======= Performance (fonts, dns) ======= -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- ======= Open Graph / Twitter ======= -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ateliê — Festas, Mesa Posta & Decoração | Linda Arte Ateliê" />
   <meta property="og:description" content="Criações autorais, mesa posta e decoração para todas as ocasiões. Solicite seu orçamento pelo WhatsApp." />
   <meta property="og:url" content="https://www.lindaarteatelie.com.br" />
   <meta property="og:site_name" content="Linda Arte Ateliê" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1556909211-3698e19f3291?q=80&w=1600&auto=format&fit=crop" />
-  <meta property="og:image:width" content="1600" />
-  <meta property="og:image:height" content="900" />
-
+  <meta property="og:image" content="./IMGS/image_1.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ateliê — Festas, Mesa Posta & Decoração | Linda Arte Ateliê" />
-  <meta name="twitter:description" content="Criações autorais, mesa posta e decoração para todas as ocasiões. Solicite seu orçamento pelo WhatsApp." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1556909211-3698e19f3291?q=80&w=1600&auto=format&fit=crop" />
+  <meta name="twitter:image" content="./IMGS/image_1.jpg" />
 
-  <!-- ======= SEO avançado: dados estruturados ======= -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Linda Arte Ateliê",
     "url": "https://www.lindaarteatelie.com.br",
-    "image": "https://images.unsplash.com/photo-1556909211-3698e19f3291?q=80&w=1600&auto=format&fit=crop",
+    "image": "./IMGS/image_1.jpg",
     "telephone": "+55 24 99999-5793",
     "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "BR"
-    },
+    "address": {"@type": "PostalAddress","addressCountry": "BR"},
     "sameAs": [
       "https://web.whatsapp.com/send?phone=5524999995793",
       "https://www.instagram.com/"
@@ -56,7 +47,7 @@
   }
   </script>
 
-  <!-- ======= Tailwind (opcional, remover se preferir CSS puro) ======= -->
+  <!-- Tailwind (mantido, já que você usa utilitárias) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -73,141 +64,33 @@
             sans: ['Inter', 'system-ui', 'Arial', 'sans-serif'],
             serif: ['Playfair Display', 'Georgia', 'serif']
           },
-          boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,.08)'
-          }
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.08)' }
         }
       }
     }
   </script>
 
-  <!-- ======= Estilos adicionais ======= -->
-  <style>
-    :root{ --radius: 16px }
-    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.5) }
-    .fade-in { opacity: 0; transform: translateY(12px); transition: all .7s ease }
-    .fade-in.is-visible{ opacity: 1; transform: translateY(0) }
-    .grid-auto-fit{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem }
-    .button-cta { border-radius: 9999px; padding:.9rem 1.2rem; font-weight:600 }
-    .whatsapp-bubble { position:fixed; right:18px; bottom:18px; z-index:60 }
-    .whatsapp-panel { position:fixed; right:90px; bottom:18px; z-index:60; width:min(360px,90vw); max-height:70vh; overflow:hidden; border-radius:16px }
-    .lazy { filter: blur(10px); transition: filter .5s ease }
-    .lazy.loaded { filter: blur(0) }
-    /* ================== TEMA DE NATAL ================== */
-    /* Popup Natal só estiliza quando o tema Christmas estiver ativo */
-.christmas #xmas-offer [role="dialog"] {
-  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.94));
-  border: 1px solid rgba(6,95,70,.12);
-  box-shadow: 0 20px 60px rgba(6,95,70,.18), 0 8px 24px rgba(185,28,28,.10);
-}
-.christmas #xmas-offer .h-2 { filter: drop-shadow(0 6px 10px rgba(185,28,28,.25)); }
-
-.christmas { --xmas-red:#b91c1c; --xmas-green:#065f46; --xmas-gold:#f59e0b; --xmas-snow:#ffffff; }
-
-/* Header com tom translúcido e borda dourada */
-.christmas header.sticky { background: rgba(255,255,255,.85); border-color: rgba(245,158,11,.35); }
-
-/* Títulos e destaques */
-.christmas h1, .christmas h2, .christmas h3, .christmas .font-serif { color: var(--xmas-green) !important; }
-.christmas .text-rose-900 { color: var(--xmas-green) !important; }
-.christmas .text-rose-700, .christmas .text-rose-700\/80 { color: #166534 !important; }
-
-/* Botões CTA ficam “natalinos” */
-.christmas .button-cta { 
-  background-image: linear-gradient(135deg,var(--xmas-green),#0f766e);
-  color:#fff!important;
-  border:none;
-  box-shadow: 0 10px 30px rgba(6,95,70,.25);
-}
-.christmas a.button-cta.bg-rose-600 { background-image: linear-gradient(135deg,var(--xmas-red),#dc2626); }
-.christmas .button-cta:hover { filter: saturate(1.1) brightness(1.02); }
-
-/* Badges e bordas com dourado */
-.christmas .border-rose-200, 
-.christmas .border-rose-100 { border-color: rgba(245,158,11,.35) !important; }
-.christmas .bg-rose-50, 
-.christmas .bg-rose-50\/60 { background-color: rgba(245,158,11,.06) !important; }
-
-/* Hero: gradiente festivo */
-.christmas section.relative > .absolute.inset-0 > .absolute.inset-0 {
-  background: linear-gradient(120deg, rgba(185,28,28,.28), rgba(245,158,11,.22), rgba(6,95,70,.28));
-}
-
-/* Guirlanda decorativa no topo das seções */
-.christmas .section-garland {
-  position: relative;
-  isolation: isolate;
-}
-.christmas .section-garland::before {
-  content:"";
-  position:absolute; inset-inline:0; top:-18px; height:36px; z-index:10;
-  background:
-    radial-gradient(circle at 10% 50%, var(--xmas-green) 6px, transparent 7px) 0 50%/36px 36px repeat-x,
-    radial-gradient(circle at 10% 50%, var(--xmas-red) 6px, transparent 7px) 18px 50%/36px 36px repeat-x;
-  filter: drop-shadow(0 6px 6px rgba(0,0,0,.08));
-}
-
-/* Cartões com “edge” festivo */
-.christmas .shadow-soft { box-shadow: 0 12px 30px rgba(6,95,70,.08), 0 2px 10px rgba(185,28,28,.05) !important; }
-.christmas .rounded-2xl { border: 1px solid rgba(6,95,70,.07); }
-
-/* WhatsApp bubble com laço */
-.christmas .whatsapp-bubble button { 
-  box-shadow: 0 0 0 4px rgba(245,158,11,.35); 
-}
-.christmas .whatsapp-bubble button::after {
-  content:"🎀"; position:absolute; translate: 12px -12px; font-size:14px;
-}
-
-/* Rodapé sutil */
-.christmas footer { border-color: rgba(245,158,11,.25) !important; }
-
-/* --------- NEVE (overlay) --------- */
-.snow-overlay { pointer-events:none; position:fixed; inset:0; z-index:30; overflow:hidden; }
-.snowflake {
-  position:absolute; top:-10px; width:6px; height:6px; border-radius:50%; background: var(--xmas-snow);
-  opacity:.9; filter: drop-shadow(0 0 4px rgba(255,255,255,.9));
-  animation-name: fall, sway; animation-duration: 10s, 6s; animation-iteration-count: infinite; 
-  animation-timing-function: linear, ease-in-out;
-}
-@keyframes fall { to { transform: translateY(110vh); } }
-@keyframes sway { 
-  0%   { margin-left:0 } 
-  50%  { margin-left:20px } 
-  100% { margin-left:0 } 
-}
-
-/* Reduzir intensidade de neve em telas muito pequenas */
-@media (max-width: 480px){
-  .snowflake { opacity:.75; animation-duration: 9s, 5.5s; }
-}
-
-  </style>
+  <!-- CSS Global -->
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
+
+<!-- DICA: adicione a classe 'christmas' para ativar tema de Natal -->
 <body class="bg-rose-50 text-slate-800 antialiased christmas" style="overflow-x: hidden">
-  <!-- ======= Header / Navbar ======= -->
-<!-- ======= HEADER (maior, logo destacada) ======= -->
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-rose-200/50 shadow-sm">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between">
-    
-    <!-- Brand -->
     <a href="#" class="flex items-center gap-4 group" aria-label="Homepage">
-      <!-- LOGO maior + destaque -->
       <div class="relative">
-        <div class="h-14 w-14 md:h-20 md:w-20  grid place-items-center   group-hover:scale-105 transition">
+        <div class="h-14 w-14 md:h-20 md:w-20 grid place-items-center group-hover:scale-105 transition">
           <img src="./LOGO.png" alt="Linda Arte Ateliê" class="h-10 md:h-14 w-auto object-contain drop-shadow" />
         </div>
-        <!-- brilho suave -->
         <span class="absolute inset-0 -z-10 blur-2xl rounded-3xl bg-rose-300/40"></span>
       </div>
-
       <div>
         <p class="font-serif text-2xl md:text-3xl text-rose-900 leading-tight">Linda Arte Ateliê</p>
         <p class="text-xs md:text-sm text-rose-700/80 -mt-1">festa • mesa posta • décor</p>
       </div>
     </a>
 
-    <!-- Nav -->
     <nav class="hidden md:flex items-center gap-7 text-[15px]">
       <a href="#servicos" class="hover:text-rose-800">Serviços</a>
       <a href="#galeria" class="hover:text-rose-800">Galeria</a>
@@ -217,783 +100,293 @@
         Orçamento
       </a>
     </nav>
-
-    <!-- Botão mobile (opcional) -->
-    <button class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-2xl bg-white/70 border border-rose-200 text-rose-700 shadow hover:bg-white"
-            aria-label="Abrir menu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/>
-      </svg>
+    <button class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-2xl bg-white/70 border border-rose-200 text-rose-700 shadow hover:bg-white" aria-label="Abrir menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
     </button>
   </div>
 </header>
 
-
-  <!-- ======= Hero ======= -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0">
-      <img alt="Mesa posta alegre" loading="lazy" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?q=80&w=2000&auto=format&fit=crop"/>
-      <div class="absolute inset-0 bg-gradient-to-br from-rose-500/30 via-rose-300/30 to-transparent"></div>
-    </div>
-    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-36 grid md:grid-cols-2 gap-10 items-center">
-      <div class="bg-white/80 p-6 md:p-10 rounded-2xl shadow-soft fade-in">
-        <h1 class="font-serif text-4xl md:text-6xl text-rose-900">Festa na Mesa</h1>
-        <p class="mt-4 text-lg text-slate-700">Locação de peças e decoração personalizada para transformar o seu evento em uma experiência inesquecível.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#contato" class="button-cta bg-rose-600 text-white hover:opacity-90">Pedir orçamento</a>
-          <a href="#galeria" class="button-cta bg-white text-rose-900 border border-rose-600/20 hover:border-rose-600">Ver projetos</a>
-        </div>
-        <ul class="mt-6 text-sm text-slate-600 grid gap-2">
-          <li>✓ Montagem e desmontagem rápida</li>
-          <li>✓ Kits temáticos e peças autorais</li>
-          <li>✓ Atendimento via WhatsApp</li>
-        </ul>
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0">
+    <img alt="Mesa posta alegre" class="w-full h-full object-cover" src="./IMGS/IMG_HERO.jpg"/>
+    <div class="absolute inset-0 bg-gradient-to-br from-rose-500/30 via-rose-300/30 to-transparent"></div>
+  </div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-36 grid md:grid-cols-2 gap-10 items-center">
+    <div class="bg-white/80 p-6 md:p-10 rounded-2xl shadow-soft fade-in">
+      <h1 class="font-serif text-4xl md:text-6xl text-rose-900">Festa na Mesa</h1>
+      <p class="mt-4 text-lg text-slate-700">Locação de peças e decoração personalizada para transformar o seu evento em uma experiência inesquecível.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#contato" class="button-cta bg-rose-600 text-white hover:opacity-90">Pedir orçamento</a>
+        <a href="#galeria" class="button-cta bg-white text-rose-900 border border-rose-600/20 hover:border-rose-600">Ver projetos</a>
       </div>
-      <div class="hidden md:block"></div>
+      <ul class="mt-6 text-sm text-slate-600 grid gap-2">
+        <li>✓ Montagem e desmontagem rápida</li>
+        <li>✓ Kits temáticos e peças autorais</li>
+        <li>✓ Atendimento via WhatsApp</li>
+      </ul>
     </div>
-  </section>
+    <div class="hidden md:block"></div>
+  </div>
+</section>
 
-  <!-- ======= Serviços ======= -->
-  <section id="servicos" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-    <div class="text-center max-w-2xl mx-auto fade-in">
-      <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Serviços</h2>
-      <p class="mt-3 text-slate-600">Soluções sob medida para cada ocasião.</p>
-    </div>
+<section id="servicos" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+  <div class="text-center max-w-2xl mx-auto fade-in">
+    <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Serviços</h2>
+    <p class="mt-3 text-slate-600">Soluções sob medida para cada ocasião.</p>
+  </div>
+  <div class="mt-10 grid md:grid-cols-3 gap-6">
+    <article class="bg-white rounded-2xl p-6 shadow-soft fade-in">
+      <h3 class="font-semibold text-lg flex items-center gap-2"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-rose-500' viewBox='0 0 24 24' fill='currentColor'><path d='M12 21s-6.716-3.568-9.193-7.045C1.335 11.547 2.1 8.5 4.61 7.52c1.632-.64 3.46.05 4.39 1.52.93-1.47 2.758-2.16 4.39-1.52 2.51.98 3.276 4.027 1.803 6.435C18.716 17.432 12 21 12 21z'/></svg>Papelaria personalizada</h3>
+      <p class="mt-2 text-sm text-slate-600">Caixinhas para doces, lembrancinhas, convites, adesivos, toppers e sacolinhas surpresa</p>
+      <ul class="mt-4 text-sm text-slate-600 list-disc pl-5">
+        <li>Artes exclusivas</li><li>Pré-montados</li><li>Adesivos</li><li>Cartão de visita</li>
+      </ul>
+    </article>
+    <article class="bg-white rounded-2xl p-6 shadow-soft fade-in">
+      <h3 class="font-semibold text-lg flex items-center gap-2"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-rose-500' viewBox='0 0 24 24' fill='currentColor'><path d='M20 7l-8 5-8-5 8-5 8 5zm0 4.236v5.382L12 22l-8-5.382V11.24l8 5.001 8-5.005z'/></svg>Decoração de Festas</h3>
+      <p class="mt-2 text-sm text-slate-600">Cenografia, flores, balões e painéis autorais para aniversários, chás e mini weddings.</p>
+      <ul class="mt-4 text-sm text-slate-600 list-disc pl-5">
+        <li>Layout 2D do espaço</li><li>Montagem técnica</li>
+      </ul>
+    </article>
+    <article class="bg-white rounded-2xl p-6 shadow-soft fade-in">
+      <h3 class="font-semibold text-lg flex items-center gap-2"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-rose-500' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2l4 4-8 8-4-4 8-8zm6.586 6.586l-8 8L7 22l5.414-3.586 8-8L18.586 8.586z'/></svg>Locação de Peças</h3>
+      <p class="mt-2 text-sm text-slate-600">Acervo com peças exclusivas para compor sua produção com personalidade.</p>
+      <ul class="mt-4 text-sm text-slate-600 list-disc pl-5">
+        <li>Catálogo atualizado</li><li>Retirada ou entrega</li>
+      </ul>
+    </article>
+  </div>
+</section>
 
-    <div class="mt-10 grid md:grid-cols-3 gap-6">
-      <article class="bg-white rounded-2xl p-6 shadow-soft fade-in">
-        <h3 class="font-semibold text-lg flex items-center gap-2"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-rose-500' viewBox='0 0 24 24' fill='currentColor'><path d='M12 21s-6.716-3.568-9.193-7.045C1.335 11.547 2.1 8.5 4.61 7.52c1.632-.64 3.46.05 4.39 1.52.93-1.47 2.758-2.16 4.39-1.52 2.51.98 3.276 4.027 1.803 6.435C18.716 17.432 12 21 12 21z'/></svg>Papelaria personalizada</h3>
-        <p class="mt-2 text-sm text-slate-600">Caixinhas para doces, lembrancinhas, convites, adesivos, toppers e sacolinhas surpresa</p>
-        <ul class="mt-4 text-sm text-slate-600 list-disc pl-5">
-          <li>Artes exclusivas</li>
-          <li>Pré-montados</li>
-          <li>Adesivos</li>
-          <li>Cartão de visita</li>
-        </ul>
-      </article>
-
-      <article class="bg-white rounded-2xl p-6 shadow-soft fade-in">
-        <h3 class="font-semibold text-lg flex items-center gap-2"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-rose-500' viewBox='0 0 24 24' fill='currentColor'><path d='M20 7l-8 5-8-5 8-5 8 5zm0 4.236v5.382L12 22l-8-5.382V11.24l8 5.001 8-5.005z'/></svg>Decoração de Festas</h3>
-        <p class="mt-2 text-sm text-slate-600">Cenografia, flores, balões e painéis autorais para aniversários, chás e mini weddings.</p>
-        <ul class="mt-4 text-sm text-slate-600 list-disc pl-5">
-          <li>Layout 2D do espaço</li>
-          <li>Montagem técnica</li>
-        </ul>
-      </article>
-
-      <article class="bg-white rounded-2xl p-6 shadow-soft fade-in">
-        <h3 class="font-semibold text-lg flex items-center gap-2"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-rose-500' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2l4 4-8 8-4-4 8-8zm6.586 6.586l-8 8L7 22l5.414-3.586 8-8L18.586 8.586z'/></svg>Locação de Peças</h3>
-        <p class="mt-2 text-sm text-slate-600">Acervo com peças exclusivas para compor sua produção com personalidade.</p>
-        <ul class="mt-4 text-sm text-slate-600 list-disc pl-5">
-          <li>Catálogo atualizado</li>
-          <li>Retirada ou entrega</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- ===================== DICAS & PASSO A PASSO ===================== -->
 <section id="dicas" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
   <div class="text-center max-w-3xl mx-auto">
     <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Veja como é simples</h2>
     <p class="mt-2 text-rose-700/80">Siga o passo a passo e garanta sua data ♥</p>
   </div>
-
   <ol class="mt-10 space-y-6">
-    <!-- item -->
     <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
       <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">1</span>
-      <p class="text-slate-700">
-        Mande um WhatsApp e verifique se a <strong>data está disponível</strong>.
-      </p>
+      <p class="text-slate-700">Mande um WhatsApp e verifique se a <strong>data está disponível</strong>.</p>
     </li>
-    <!-- item -->
     <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
       <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">2</span>
-      <p class="text-slate-700">
-        Informe o <strong>tema</strong> e o <strong>pacote</strong> que deseja contratar.
-      </p>
+      <p class="text-slate-700">Informe o <strong>tema</strong> e o <strong>pacote</strong> que deseja contratar.</p>
     </li>
-    <!-- item -->
     <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
       <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">3</span>
-      <p class="text-slate-700">
-        Confirme o pedido mediante <strong>pagamento de 50%</strong>.
-      </p>
+      <p class="text-slate-700">Confirme o pedido mediante <strong>pagamento de 50%</strong>.</p>
     </li>
-    <!-- item -->
     <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
       <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">4</span>
-      <p class="text-slate-700">
-        Agende o <strong>horário de retirada</strong> e assinamos o contrato.
-      </p>
+      <p class="text-slate-700">Agende o <strong>horário de retirada</strong> e assinamos o contrato.</p>
     </li>
-    <!-- item -->
     <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
       <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">5</span>
-      <p class="text-slate-700">
-        Precisa de <strong>frete</strong>? Fale com a gente — temos taxas para transporte.
-      </p>
+      <p class="text-slate-700">Precisa de <strong>frete</strong>? Fale com a gente — temos taxas para transporte.</p>
     </li>
   </ol>
 </section>
 
-<!-- ===================== OFERTAS & PACOTES ===================== -->
 <section id="ofertas" class="bg-rose-50/60">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
     <div class="text-center max-w-3xl mx-auto">
       <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Pacotes disponíveis</h2>
       <p class="mt-2 text-rose-700/80">Escolha o seu e peça pelo WhatsApp</p>
     </div>
-
     <div class="mt-10 grid md:grid-cols-2 gap-6">
-      <!-- Básico -->
       <article class="bg-white rounded-2xl p-6 shadow-soft border-2 border-rose-200">
         <header class="flex items-center justify-between">
           <h3 class="text-2xl font-bold text-rose-700">Básico</h3>
           <div class="rounded-xl px-3 py-1 text-sm bg-rose-50 text-rose-700 border border-rose-200">Oferta</div>
         </header>
-
         <ul class="mt-4 space-y-2 text-slate-700">
-          <li>1 Painel com balões</li>
-          <li>1 Boleira</li>
-          <li>1 Mesinha pra doces</li>
-          <li>1 Vaso de flor</li>
-          <li>1 Bandeja grande</li>
-          <li>1 Bandeja pequena</li>
-          <li></li>
+          <li>1 Painel com balões</li><li>1 Boleira</li><li>1 Mesinha pra doces</li><li>1 Vaso de flor</li><li>1 Bandeja grande</li><li>1 Bandeja pequena</li>
         </ul>
-
         <div class="mt-6 flex items-end gap-2">
-          <span class="text-sm text-slate-500">R$</span>
-          <span class="text-4xl font-extrabold text-rose-700 leading-none">69</span>
-          <span class="text-sm text-slate-500">,00</span>
+          <span class="text-sm text-slate-500">R$</span><span class="text-4xl font-extrabold text-rose-700 leading-none">69</span><span class="text-sm text-slate-500">,00</span>
         </div>
-
         <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Olá!%20Quero%20o%20Pacote%20Básico%20(69,00)." target="_blank" rel="noopener"
-           class="mt-4 inline-flex items-center justify-center w-full rounded-xl bg-rose-600 text-white py-2.5 font-semibold hover:opacity-90">
-          Pedir no WhatsApp
-        </a>
+           class="mt-4 inline-flex items-center justify-center w-full rounded-xl bg-rose-600 text-white py-2.5 font-semibold hover:opacity-90">Pedir no WhatsApp</a>
       </article>
 
-      <!-- Completo -->
       <article class="bg-white rounded-2xl p-6 shadow-soft border-2 border-rose-200">
         <header class="flex items-center justify-between">
           <h3 class="text-2xl font-bold text-rose-700">Completo</h3>
           <div class="rounded-xl px-3 py-1 text-sm bg-rose-50 text-rose-700 border border-rose-200">Melhor custo-benefício</div>
         </header>
-
         <ul class="mt-4 space-y-2 text-slate-700">
-          <li>1 Mesa cavalete</li>
-          <li>1 Painel com balões</li>
-          <li>1 Boleira</li>
-          <li>1 Mesinha pra doces</li>
-          <li>1 Vaso de flor</li>
-          <li>1 Bandeja grande</li>
-          <li>1 Bandeja pequena</li>
+          <li>1 Mesa cavalete</li><li>1 Painel com balões</li><li>1 Boleira</li><li>1 Mesinha pra doces</li><li>1 Vaso de flor</li><li>1 Bandeja grande</li><li>1 Bandeja pequena</li>
         </ul>
-
         <div class="mt-6 flex items-end gap-2">
-          <span class="text-sm text-slate-500">R$</span>
-          <span class="text-4xl font-extrabold text-rose-700 leading-none">89</span>
-          <span class="text-sm text-slate-500">,00</span>
+          <span class="text-sm text-slate-500">R$</span><span class="text-4xl font-extrabold text-rose-700 leading-none">89</span><span class="text-sm text-slate-500">,00</span>
         </div>
-
         <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Olá!%20Quero%20o%20Pacote%20Completo%20(89,00)." target="_blank" rel="noopener"
-           class="mt-4 inline-flex items-center justify-center w-full rounded-xl bg-rose-600 text-white py-2.5 font-semibold hover:opacity-90">
-          Pedir no WhatsApp
-        </a>
+           class="mt-4 inline-flex items-center justify-center w-full rounded-xl bg-rose-600 text-white py-2.5 font-semibold hover:opacity-90">Pedir no WhatsApp</a>
       </article>
     </div>
 
-    <!-- Extras / Dicas rápidas -->
     <div class="mt-12 grid md:grid-cols-3 gap-6">
       <div class="bg-white rounded-2xl p-6 shadow-soft border border-rose-100">
         <h4 class="font-semibold text-rose-800">Também fazemos</h4>
         <ul class="mt-3 text-slate-700 space-y-1">
-          <li>Papelaria personalizada</li>
-          <li>Encadernação</li>
-          <li>Convite digital</li>
-          <li>Topo de bolo</li>
+          <li>Papelaria personalizada</li><li>Encadernação</li><li>Convite digital</li><li>Topo de bolo</li>
         </ul>
       </div>
-
       <div class="bg-white rounded-2xl p-6 shadow-soft border border-rose-100">
         <h4 class="font-semibold text-rose-800">Dica rápida</h4>
         <p class="mt-2 text-slate-700">Para mesversário do bebê, montamos <strong>pacotes especiais</strong> combinando tema, mesa posta e papelaria.</p>
       </div>
-
       <div class="bg-white rounded-2xl p-6 shadow-soft border border-rose-100">
         <h4 class="font-semibold text-rose-800">Fale com a gente</h4>
         <p class="mt-2 text-slate-700">Tem dúvidas sobre tema, frete ou montagem?</p>
         <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Olá!%20Quero%20tirar%20uma%20dúvida%20sobre%20os%20pacotes." target="_blank" rel="noopener"
-           class="mt-3 inline-flex items-center gap-2 rounded-xl bg-rose-600 text-white px-4 py-2 font-semibold hover:opacity-90">
-          Abrir WhatsApp
-        </a>
+           class="mt-3 inline-flex items-center gap-2 rounded-xl bg-rose-600 text-white px-4 py-2 font-semibold hover:opacity-90">Abrir WhatsApp</a>
       </div>
     </div>
   </div>
 </section>
 
-
-  <!-- ======= Galeria ======= -->
-  <section id="galeria" class="bg-white relative">
-    <div class="pointer-events-none absolute -top-8 -left-8 w-40 h-40 bg-rose-200 opacity-60 blur-2xl rounded-full"></div>
-    <div class="pointer-events-none absolute -bottom-10 -right-10 w-52 h-52 bg-rose-300 opacity-60 blur-2xl rounded-full"></div>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      <div class="text-center max-w-2xl mx-auto fade-in">
-        <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Galeria</h2>
-        <p class="mt-3 text-slate-600">Alguns registros de composições & detalhes.</p>
-      </div>
-
-      <div class="mt-10 grid-auto-fit" id="galeria-rotativa">
-        <!-- Substitua pelos seus arquivos/imagens reais -->
-        <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
-          <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_3.jpg" alt="Festa na mesa" />
-        </figure>
-        <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
-          <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_4.jpg" alt="Decoração de mini festa" />
-        </figure>
-        <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
-          <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_2.jpg" alt="Papelaria personalizada" />
-        </figure>
-        <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
-          <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_1.jpg" alt="Personalizados de festa" />
-        </figure>
-      </div>
-
-      <div class="text-center mt-10">
-        <a href="#contato" class="button-cta bg-rose-600 text-white hover:opacity-90">Quero um orçamento</a>
-      </div>
+<section id="galeria" class="bg-white relative">
+  <div class="pointer-events-none absolute -top-8 -left-8 w-40 h-40 bg-rose-200 opacity-60 blur-2xl rounded-full"></div>
+  <div class="pointer-events-none absolute -bottom-10 -right-10 w-52 h-52 bg-rose-300 opacity-60 blur-2xl rounded-full"></div>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center max-w-2xl mx-auto fade-in">
+      <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Galeria</h2>
+      <p class="mt-3 text-slate-600">Alguns registros de composições & detalhes.</p>
     </div>
-  </section>
 
-  <!-- ======= Sobre ======= -->
-  <section id="sobre" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <div class="fade-in">
-        <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Sobre o Ateliê</h2>
-        <p class="mt-4 text-slate-700">Somos um estúdio criativo apaixonado por composições que contam histórias. Do briefing ao último detalhe, entregamos experiências com curadoria, técnica e afeto.</p>
-        <ul class="mt-6 space-y-3 text-slate-700">
-          <li>• Atendimento personalizado</li>
-          <li>• Portfolio autoral & peças exclusivas</li>
-          <li>• Logística ágil e montagem profissional</li>
-        </ul>
-      </div>
-      <div class="bg-white rounded-2xl p-6 shadow-soft fade-in">
-        <h3 class="font-semibold">Perguntas frequentes</h3>
-        <details class="mt-4 border-b py-3">
-          <summary class="cursor-pointer font-medium">Como funciona o orçamento?</summary>
-          <p class="mt-2 text-sm text-slate-600">Enviamos uma proposta baseada no briefing (tema, data, local, itens de locação). Após aprovação, agendamos e confirmamos o evento.</p>
-        </details>
-        <details class="border-b py-3">
-          <summary class="cursor-pointer font-medium">Atendem fora da cidade?</summary>
-          <p class="mt-2 text-sm text-slate-600">Sim! Consultar taxa de deslocamento e disponibilidade de agenda.</p>
-        </details>
-        <details class="py-3">
-          <summary class="cursor-pointer font-medium">Posso alugar só as peças?</summary>
-          <p class="mt-2 text-sm text-slate-600">Claro. Oferecemos locação unitária com retirada ou entrega programada.</p>
-        </details>
-      </div>
+    <div class="mt-10 grid-auto-fit" id="galeria-rotativa">
+      <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
+        <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_3.jpg" alt="Festa na mesa" />
+      </figure>
+      <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
+        <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_4.jpg" alt="Decoração de mini festa" />
+      </figure>
+      <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
+        <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_2.jpg" alt="Papelaria personalizada" />
+      </figure>
+      <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
+        <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_1.jpg" alt="Personalizados de festa" />
+      </figure>
     </div>
-  </section>
 
-  <!-- ======= CTA / Contato ======= -->
-  <section id="contato" class="relative bg-gradient-to-br from-rose-600 via-rose-500 to-rose-400 text-white">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center">
-      <div class="fade-in">
-        <h2 class="font-serif text-3xl md:text-4xl">Vamos planejar sua festa?</h2>
-        <p class="mt-3 text-white/80">Fale com a gente no WhatsApp e receba seu orçamento ainda hoje.</p>
-        <a class="button-cta mt-6 inline-flex items-center gap-2 bg-white text-rose-900 hover:opacity-90" href="https://web.whatsapp.com/send?phone=5524999995793&text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20mesa%20posta/decora%C3%A7%C3%A3o." target="_blank" rel="noopener">Abrir WhatsApp</a>
-        
-      </div>
-      <form class="bg-white/10 glass rounded-2xl p-6 shadow-soft fade-in" onsubmit="event.preventDefault(); window.location='https://web.whatsapp.com/send?phone=5524999995793&text=' + encodeURIComponent('Olá! Meu nome é ' + this.nome.value + ' — Evento em ' + this.data.value + ' para ' + this.pessoas.value + ' pessoas. Tema: ' + this.tema.value) ;">
-        <div class="grid md:grid-cols-2 gap-4">
-          <div>
-            <label class="text-sm">Seu nome</label>
-            <input name="nome" required class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" placeholder="Nome completo"/>
-          </div>
-          <div>
-            <label class="text-sm">Data do evento</label>
-            <input name="data" type="date" required class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" />
-          </div>
-          <div>
-            <label class="text-sm">Qtd. de pessoas</label>
-            <input name="pessoas" type="number" min="1" class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" placeholder="Ex.: 30" />
-          </div>
-          <div>
-            <label class="text-sm">Tema</label>
-            <input name="tema" class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" placeholder="Ex.: Botânico, Minimalista..." />
-          </div>
-        </div>
-        <button type="submit" class="button-cta w-full mt-4 bg-white text-rose-900 hover:opacity-90">Enviar no WhatsApp</button>
-        <p class="mt-3 text-xs text-white/70">Ao enviar, você será redirecionado ao WhatsApp com a mensagem preenchida.</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- ======= Footer ======= -->
-  <footer class="bg-white border-t border-slate-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8 text-sm">
-      <div>
-        <p class="font-serif text-lg text-rose-900">Linda Arte Ateliê </p>
-       
-      </div>
-      <div>
-        <p class="font-semibold">Atendimento</p>
-        <p class="mt-2 text-slate-600">contato@lindaarteatelie.com.br</p>
-        <a class="block mt-2 hover:text-rose-900" href="https://web.whatsapp.com/send?phone=5524999995793" target="_blank" rel="noopener">WhatsApp: +55 (24) 9 9999-5793</a>
-      </div>
-      <div>
-        <p class="font-semibold">Redes</p>
-        <a class="block mt-2 hover:text-rose-900" href="https://www.instagram.com/festanamesavoltaredonda" aria-label="Instagram">Instagram</a>
-        
-      </div>
-    </div>
-    <div class="text-center text-xs text-slate-500 pb-8">© <span id="year"></span>Linda Arte Ateliê. Todos os direitos reservados.</div>
-  </footer>
-
-  <!-- ======= Mini bot WhatsApp (FAQ + CTA) ======= -->
-  <div class="whatsapp-bubble animate-bounce">
-    <button id="wa-bubble" aria-label="Abrir chat WhatsApp" class="h-14 w-14 rounded-full shadow-soft grid place-items-center bg-green-500 ring-4 ring-rose-300 hover:brightness-110" title="Fale conosco no WhatsApp">
-      <!-- Ícone WhatsApp -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7 text-white"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.06 0C5.7 0 .54 5.16.54 11.52c0 2.03.53 4.03 1.54 5.8L0 24l6.83-2.03a11.6 11.6 0 0 0 5.23 1.26h.01c6.36 0 11.52-5.16 11.52-11.52 0-3.08-1.2-5.98-3.07-8.23zM12.06 21.2h-.01a9.7 9.7 0 0 1-4.96-1.36l-.35-.2-4.06 1.21 1.2-3.95-.23-.37a9.67 9.67 0 0 1-1.49-5.01c0-5.36 4.36-9.72 9.73-9.72 2.6 0 5.04 1.01 6.87 2.84a9.67 9.67 0 0 1 2.85 6.88c0 5.37-4.36 9.68-9.55 9.68zm5.42-7.27c-.29-.15-1.73-.86-2-.96-.26-.1-.45-.15-.65.15-.19.29-.75.96-.92 1.16-.17.19-.34.22-.63.08-.29-.15-1.23-.45-2.34-1.42-.86-.76-1.45-1.7-1.62-1.98-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.65-1.56-.9-2.13-.24-.58-.48-.5-.65-.5-.17 0-.36-.02-.55-.02s-.5.07-.77.36c-.26.29-1.01.98-1.01 2.39 0 1.4 1.04 2.75 1.19 2.94.15.19 2.05 3.14 4.95 4.41.69.3 1.22.48 1.64.62.69.22 1.32.19 1.82.12.56-.08 1.73-.71 1.98-1.4.24-.69.24-1.28.17-1.4-.07-.12-.26-.19-.55-.34z"/></svg>
-    </button>
-  </div>
-
-  <div id="wa-panel" class="whatsapp-panel hidden bg-white shadow-soft">
-    <div class="p-4 border-b flex items-center justify-between">
-      <div>
-        <p class="font-semibold">Fale com o Ateliê</p>
-        <p class="text-xs text-slate-500">Resposta rápida • WhatsApp</p>
-      </div>
-      <button id="wa-close" aria-label="Fechar" class="p-2 rounded-lg hover:bg-slate-100">✕</button>
-    </div>
-    <div class="p-4 space-y-3 text-sm max-h-[48vh] overflow-y-auto">
-      <div class="bg-slate-50 rounded-xl p-3">Olá! Posso te ajudar com orçamento, disponibilidade e opções de temas. Escolha uma opção:</div>
-      <div class="flex flex-wrap gap-2">
-        <button class="px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 wa-q" data-q="Olá! Quero orçamento para mesa posta.">Orçamento</button>
-        <button class="px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 wa-q" data-q="Olá! Gostaria de saber datas disponíveis.">Disponibilidade</button>
-        <button class="px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 wa-q" data-q="Quais temas vocês recomendam para o meu evento?">Temas</button>
-      </div>
-    </div>
-    <div class="p-4 border-t bg-slate-50 flex gap-2">
-      <input id="wa-input" disabled class="flex-1 bg-white rounded-xl px-3 py-2 opacity-60 cursor-not-allowed"
-       placeholder="Use as opções acima…" />
-<button id="wa-send" class="px-4 rounded-xl bg-green-500 text-white hidden">Enviar</button>
-
+    <div class="text-center mt-10">
+      <a href="#contato" class="button-cta bg-rose-600 text-white hover:opacity-90">Quero um orçamento</a>
     </div>
   </div>
+</section>
 
-<script>
-/**
- * Rotator de 4 imagens com troca por lote (batch), shuffle/sequencial,
- * pausa no hover/tab oculta, e pré-carregamento.
- */
-(function ImageQuadRotator(){
-  // ============ CONFIG ============
-  const CFG = {
-    container: '#galeria-rotativa', // grade que já tem 4 <figure>
-    // Lista de TODAS as imagens disponíveis no seu acervo:
-    sources: [
-      './IMGS/image_1.jpg','./IMGS/image_2.jpg','./IMGS/image_3.jpg','./IMGS/image_4.jpg',
-      './IMGS/image_5.jpg','./IMGS/image_6.jpg','./IMGS/image_7.jpg','./IMGS/image_8.jpg',
-      './IMGS/image_9.jpg','./IMGS/image_10.jpg','./IMGS/image_11.jpg','./IMGS/image_12.jpg'
-    ],
-    intervalMs: 6000,          // <- troque o "X" aqui (em ms)
-    mode: 'shuffle',           // 'shuffle' ou 'sequential'
-    batchSize: 4,              // sempre 4
-    preloadAhead: 6,           // pré-carregar próximas N imagens
-    fadeMs: 450,               // duração da transição
-    fallback: 'https://euaa.europa.eu/sites/default/files/styles/width_600px/public/default_images/news-default-big.png?itok=NNXAZZTc'
-  };
-  // ============ /CONFIG ============
+<section id="sobre" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div class="fade-in">
+      <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Sobre o Ateliê</h2>
+      <p class="mt-4 text-slate-700">Somos um estúdio criativo apaixonado por composições que contam histórias. Do briefing ao último detalhe, entregamos experiências com curadoria, técnica e afeto.</p>
+      <ul class="mt-6 space-y-3 text-slate-700">
+        <li>• Atendimento personalizado</li>
+        <li>• Portfolio autoral & peças exclusivas</li>
+        <li>• Logística ágil e montagem profissional</li>
+      </ul>
+    </div>
+    <div class="bg-white rounded-2xl p-6 shadow-soft fade-in">
+      <h3 class="font-semibold">Perguntas frequentes</h3>
+      <details class="mt-4 border-b py-3">
+        <summary class="cursor-pointer font-medium">Como funciona o orçamento?</summary>
+        <p class="mt-2 text-sm text-slate-600">Enviamos uma proposta baseada no briefing (tema, data, local, itens de locação). Após aprovação, agendamos e confirmamos o evento.</p>
+      </details>
+      <details class="border-b py-3">
+        <summary class="cursor-pointer font-medium">Atendem fora da cidade?</summary>
+        <p class="mt-2 text-sm text-slate-600">Sim! Consultar taxa de deslocamento e disponibilidade de agenda.</p>
+      </details>
+      <details class="py-3">
+        <summary class="cursor-pointer font-medium">Posso alugar só as peças?</summary>
+        <p class="mt-2 text-sm text-slate-600">Claro. Oferecemos locação unitária com retirada ou entrega programada.</p>
+      </details>
+    </div>
+  </div>
+</section>
 
-  const $grid = document.querySelector(CFG.container);
-  if (!$grid) return console.warn('Rotator: container não encontrado:', CFG.container);
+<section id="contato" class="relative bg-gradient-to-br from-rose-600 via-rose-500 to-rose-400 text-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div class="fade-in">
+      <h2 class="font-serif text-3xl md:text-4xl">Vamos planejar sua festa?</h2>
+      <p class="mt-3 text-white/80">Fale com a gente no WhatsApp e receba seu orçamento ainda hoje.</p>
+      <a class="button-cta mt-6 inline-flex items-center gap-2 bg-white text-rose-900 hover:opacity-90" href="https://web.whatsapp.com/send?phone=5524999995793&text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20mesa%20posta/decora%C3%A7%C3%A3o." target="_blank" rel="noopener">Abrir WhatsApp</a>
+    </div>
+    <form class="bg-white/10 glass rounded-2xl p-6 shadow-soft fade-in" onsubmit="event.preventDefault(); window.location='https://web.whatsapp.com/send?phone=5524999995793&text=' + encodeURIComponent('Olá! Meu nome é ' + this.nome.value + ' — Evento em ' + this.data.value + ' para ' + this.pessoas.value + ' pessoas. Tema: ' + this.tema.value) ;">
+      <div class="grid md:grid-cols-2 gap-4">
+        <div><label class="text-sm">Seu nome</label><input name="nome" required class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" placeholder="Nome completo"/></div>
+        <div><label class="text-sm">Data do evento</label><input name="data" type="date" required class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" /></div>
+        <div><label class="text-sm">Qtd. de pessoas</label><input name="pessoas" type="number" min="1" class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" placeholder="Ex.: 30" /></div>
+        <div><label class="text-sm">Tema</label><input name="tema" class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" placeholder="Ex.: Botânico, Minimalista..." /></div>
+      </div>
+      <button type="submit" class="button-cta w-full mt-4 bg-white text-rose-900 hover:opacity-90">Enviar no WhatsApp</button>
+      <p class="mt-3 text-xs text-white/70">Ao enviar, você será redirecionado ao WhatsApp com a mensagem preenchida.</p>
+    </form>
+  </div>
+</section>
 
-  // Pega os 4 <img> existentes (reaproveitamos as <figure>)
-  const $imgs = Array.from($grid.querySelectorAll('img')).slice(0, CFG.batchSize);
-  if ($imgs.length < CFG.batchSize) {
-    return console.warn('Rotator: são necessários 4 <img> dentro da grade.');
-  }
+<footer class="bg-white border-t border-slate-200">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8 text-sm">
+    <div><p class="font-serif text-lg text-rose-900">Linda Arte Ateliê </p></div>
+    <div>
+      <p class="font-semibold">Atendimento</p>
+      <p class="mt-2 text-slate-600">contato@lindaarteatelie.com.br</p>
+      <a class="block mt-2 hover:text-rose-900" href="https://web.whatsapp.com/send?phone=5524999995793" target="_blank" rel="noopener">WhatsApp: +55 (24) 9 9999-5793</a>
+    </div>
+    <div>
+      <p class="font-semibold">Redes</p>
+      <a class="block mt-2 hover:text-rose-900" href="https://www.instagram.com/festanamesavoltaredonda" aria-label="Instagram">Instagram</a>
+    </div>
+  </div>
+  <div class="text-center text-xs text-slate-500 pb-8">© <span id="year"></span> Linda Arte Ateliê. Todos os direitos reservados.</div>
+</footer>
 
-  // CSS suave (inline pra não depender de arquivo externo)
-  const style = document.createElement('style');
-  style.textContent = `
-    ${CFG.container} img { transition: opacity ${CFG.fadeMs}ms ease; opacity: 1; }
-    ${CFG.container} img.is-fading { opacity: 0; }
-  `;
-  document.head.appendChild(style);
+<!-- Bubble WhatsApp -->
+<div class="whatsapp-bubble animate-bounce">
+  <button id="wa-bubble" aria-label="Abrir chat WhatsApp" class="h-14 w-14 rounded-full shadow-soft grid place-items-center bg-green-500 ring-4 ring-rose-300 hover:brightness-110" title="Fale conosco no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7 text-white"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.06 0C5.7 0 .54 5.16.54 11.52c0 2.03.53 4.03 1.54 5.8L0 24l6.83-2.03a11.6 11.6 0 0 0 5.23 1.26h.01c6.36 0 11.52-5.16 11.52-11.52 0-3.08-1.2-5.98-3.07-8.23zM12.06 21.2h-.01a9.7 9.7 0 0 1-4.96-1.36l-.35-.2-4.06 1.21 1.2-3.95-.23-.37a9.67 9.67 0 0 1-1.49-5.01c0-5.36 4.36-9.72 9.73-9.72 2.6 0 5.04 1.01 6.87 2.84a9.67 9.67 0 0 1 2.85 6.88c0 5.37-4.36 9.68-9.55 9.68zm5.42-7.27c-.29-.15-1.73-.86-2-.96-.26-.1-.45-.15-.65.15-.19.29-.75.96-.92 1.16-.17.19-.34.22-.63.08-.29-.15-1.23-.45-2.34-1.42-.86-.76-1.45-1.7-1.62-1.98-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.65-1.56-.9-2.13-.24-.58-.48-.5-.65-.5-.17 0-.36-.02-.55-.02s-.5.07-.77.36c-.26.29-1.01.98-1.01 2.39 0 1.4 1.04 2.75 1.19 2.94.15.19 2.05 3.14 4.95 4.41.69.3 1.22.48 1.64.62.69.22 1.32.19 1.82.12.56-.08 1.73-.71 1.98-1.4.24-.69.24-1.28.17-1.4-.07-.12-.26-.19-.55-.34z"/></svg>
+  </button>
+</div>
 
-  // Utilitários
-  const shuffle = (arr) => arr
-    .map(v => [Math.random(), v])
-    .sort((a,b)=>a[0]-b[0])
-    .map(v => v[1]);
+<!-- Painel WhatsApp -->
+<div id="wa-panel" class="whatsapp-panel hidden bg-white shadow-soft">
+  <div class="p-4 border-b flex items-center justify-between">
+    <div><p class="font-semibold">Fale com o Ateliê</p><p class="text-xs text-slate-500">Resposta rápida • WhatsApp</p></div>
+    <button id="wa-close" aria-label="Fechar" class="p-2 rounded-lg hover:bg-slate-100">✕</button>
+  </div>
+  <div class="p-4 space-y-3 text-sm max-h-[48vh] overflow-y-auto">
+    <div class="bg-slate-50 rounded-xl p-3">Olá! Posso te ajudar com orçamento, disponibilidade e opções de temas. Escolha uma opção:</div>
+    <div class="flex flex-wrap gap-2">
+      <button class="px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 wa-q" data-q="Olá! Quero orçamento para mesa posta.">Orçamento</button>
+      <button class="px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 wa-q" data-q="Olá! Gostaria de saber datas disponíveis.">Disponibilidade</button>
+      <button class="px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 wa-q" data-q="Quais temas vocês recomendam para o meu evento?">Temas</button>
+    </div>
+  </div>
+  <div class="p-4 border-t bg-slate-50 flex gap-2">
+    <input id="wa-input" disabled class="flex-1 bg-white rounded-xl px-3 py-2 opacity-60 cursor-not-allowed" placeholder="Use as opções acima…" />
+    <button id="wa-send" class="px-4 rounded-xl bg-green-500 text-white hidden">Enviar</button>
+  </div>
+</div>
 
-  const uniqueNextBatch = (() => {
-    let index = 0;
-    let pool = CFG.mode === 'shuffle' ? shuffle([...CFG.sources]) : [...CFG.sources];
-
-    return () => {
-      // Recria pool se esgotar
-      if (index >= pool.length) {
-        pool = CFG.mode === 'shuffle' ? shuffle([...CFG.sources]) : [...CFG.sources];
-        index = 0;
-      }
-      // Evita “sobrar” menos de 4: reinicia pra não repetir imagens do mesmo lote
-      if (index + CFG.batchSize > pool.length) {
-        pool = CFG.mode === 'shuffle' ? shuffle([...CFG.sources]) : [...CFG.sources];
-        index = 0;
-      }
-      const batch = pool.slice(index, index + CFG.batchSize);
-      index += CFG.batchSize;
-      return batch;
-    };
-  })();
-
-  // Pré-carregamento
-  const preload = (urls) => {
-    urls.forEach(u => {
-      const img = new Image();
-      img.src = u;
-    });
-  };
-
-  // Troca com transição e fallback
-  const swapTo = (imgEl, newSrc) => {
-    return new Promise(resolve => {
-      imgEl.classList.add('is-fading');
-      const doSwap = () => {
-        imgEl.onload = () => { imgEl.classList.remove('is-fading'); resolve(); };
-        imgEl.onerror = () => { imgEl.src = CFG.fallback; imgEl.classList.remove('is-fading'); resolve(); };
-        imgEl.src = newSrc;
-      };
-      // espera metade do fade pra trocar o src (efeito mais suave)
-      setTimeout(doSwap, CFG.fadeMs * 0.5);
-    });
-  };
-
-  // Lote inicial: usa o que já está na página, sem piscar
-  // (se já tiverem data-src, honramos trocando pra src apenas no primeiro tick)
-  // Em seguida, agenda as trocas
-  let timer = null;
-  let paused = false;
-
-  const tick = async () => {
-    if (paused) return;
-    const batch = uniqueNextBatch();
-    // Preload das próximas imagens
-    preload(batch.slice(0, CFG.preloadAhead));
-
-    // Troca as 4 com transição
-    await Promise.all($imgs.map((el, i) => swapTo(el, batch[i])));
-  };
-
-  // Pausa no hover e quando a aba estiver oculta (economia de CPU)
-  const onVisibility = () => { paused = document.hidden; };
-  document.addEventListener('visibilitychange', onVisibility);
-  $grid.addEventListener('mouseenter', () => { paused = true; });
-  $grid.addEventListener('mouseleave', () => { paused = false; });
-
-  // Se as imagens iniciais usam data-src, carregue-as já
-  $imgs.forEach(img => {
-    if (img.dataset && img.dataset.src && !img.src) {
-      img.src = img.dataset.src;
-      img.addEventListener('error', () => { img.src = CFG.fallback; }, { once: true });
-    }
-  });
-
-  // Inicia o ciclo
-  timer = setInterval(tick, CFG.intervalMs);
-  // dispara a primeira troca depois de 1 intervalo (pra não piscar logo ao abrir)
-  // Se quiser trocar imediatamente na carga, chame tick() aqui.
-})();
-</script>
-
-<!-- 1) Script MÓDULO: importa diretamente da CDN (ESM) -->
-<script type="module">
-  import { pipeline } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.7.6';
-
-  window.hfPipeline = pipeline;
-
-  // Exemplo: cria o pipeline e guarda num global
-  async function initAssistant() {
-    // Tenta WebGPU com q4f16; se der erro, cai pra WASM q4
-    let pipe;
-    try {
-      pipe = await pipeline('text-generation', 'HuggingFaceTB/SmolLM2-135M-Instruct', {
-        device: 'webgpu', dtype: 'q4f16'
-      });
-    } catch (e) {
-      console.warn('WebGPU indisponível, caindo para WASM q4', e);
-      pipe = await pipeline('text-generation', 'HuggingFaceTB/SmolLM2-135M-Instruct', {
-        device: 'wasm', dtype: 'q4'
-      });
-    }
-    window._genPipe = pipe; // salva pra usar em outros scripts
-    console.log('Assistente carregada ✅');
-  }
-
-  // chame isso ao abrir o painel
-  window.loadAssistant = initAssistant;
-
-  // helper pra gerar resposta
-  window.aiReply = async (userText) => {
-    if (!window._genPipe) await initAssistant();
-    const prompt = `Você é a secretária do ateliê. Responda em PT-BR, curto e gentil.
-Usuário: ${userText}
-Secretária:`;
-    const out = await window._genPipe(prompt, {
-      max_new_tokens: 140, temperature: 0.6, top_p: 0.9, repetition_penalty: 1.05,
-      stop: ['Usuário:']
-    });
-    return out[0].generated_text.replace(prompt, '').trim();
-  };
-</script>
-
-
-
-
-  <!-- ======= Scripts ======= -->
-  <script>
-    // Ano dinâmico
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Aparecer ao rolar
-    const onScrollReveal = () => {
-      document.querySelectorAll('.fade-in').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if(rect.top < window.innerHeight * 0.85) el.classList.add('is-visible');
-      });
-    };
-    window.addEventListener('scroll', onScrollReveal);
-    window.addEventListener('load', onScrollReveal);
-
-    // Lazy loading manual (para compatibilidade ampla)
-    const lazyImages = document.querySelectorAll('img.lazy');
-    const lazyObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          const img = entry.target; img.src = img.dataset.src; img.onload = () => img.classList.add('loaded');
-          lazyObserver.unobserve(img);
-        }
-      })
-    }) : null;
-    lazyImages.forEach(img => lazyObserver ? lazyObserver.observe(img) : (img.src = img.dataset.src));
-
-    
-  </script>
-
- <script>
-(() => {
-  const waBubble = document.getElementById('wa-bubble');
-  const waPanel  = document.getElementById('wa-panel');
-  const waClose  = document.getElementById('wa-close');
-  const panelBody = document.querySelector('#wa-panel .p-4.space-y-3');
-  const WA_NUMBER = '5524999995793';
-
-  // ---- UI helpers ----
-  const bubble = (html, me=false) => {
-    const el = document.createElement('div');
-    el.className = `max-w-[85%] rounded-2xl px-3 py-2 text-sm shadow ${me ? 'ml-auto bg-rose-600 text-white' : 'bg-white text-slate-700 border border-rose-100'}`;
-    el.innerHTML = html;
-    panelBody.appendChild(el);
-    panelBody.scrollTop = panelBody.scrollHeight;
-    return el;
-  };
-  const chips = (items) => {
-    const wrap = document.createElement('div');
-    wrap.className = 'flex flex-wrap gap-2 mt-2';
-    items.forEach(({label, onClick}) => {
-      const b = document.createElement('button');
-      b.className = 'px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 hover:bg-green-100';
-      b.textContent = label;
-      b.onclick = onClick;
-      wrap.appendChild(b);
-    });
-    return wrap;
-  };
-  const askDate = (onPick) => {
-    const w = document.createElement('div');
-    w.className = 'mt-2 flex items-center gap-2';
-    const i = document.createElement('input');
-    i.type = 'date';
-    i.className = 'rounded-lg border px-3 py-1';
-    const b = document.createElement('button');
-    b.className = 'px-3 py-1 rounded-lg bg-rose-600 text-white';
-    b.textContent = 'OK';
-    b.onclick = () => { if(i.value) onPick(i.value.split('-').reverse().join('/')); };
-    w.appendChild(i); w.appendChild(b);
-    return w;
-  };
-  const askCity = (onPick) => {
-    const w = document.createElement('div');
-    w.className = 'mt-2 flex items-center gap-2';
-    const i = document.createElement('input');
-    i.placeholder = 'Cidade/Bairro';
-    i.className = 'rounded-lg border px-3 py-1';
-    const b = document.createElement('button');
-    b.className = 'px-3 py-1 rounded-lg bg-rose-600 text-white';
-    b.textContent = 'OK';
-    b.onclick = () => { if(i.value.trim()) onPick(i.value.trim()); };
-    w.appendChild(i); w.appendChild(b);
-    return w;
-  };
-
-  // ---- Estado do fluxo ----
-  const state = { flow: null, theme: null, date: null, city: null, people: null };
-
-  // ---- Etapas comuns (wizard) ----
-  function stepTheme(next) {
-    const box = bubble('Qual o <b>tema</b> do evento?');
-    const options = ['Floral','Candy','Boho','Botânico','Clean','Outro'];
-    box.appendChild(chips(options.map(t => ({
-      label: t, onClick: () => { state.theme = t; next(); }
-    }))));
-  }
-  function stepDate(next) {
-    const box = bubble('Qual a <b>data</b>?');
-    box.appendChild(askDate((d) => { state.date = d; next(); }));
-  }
-  function stepCity(next) {
-    const box = bubble('Em qual <b>cidade/bairro</b> será?');
-    box.appendChild(askCity((c) => { state.city = c; next(); }));
-  }
-  function stepPeople(next) {
-    const box = bubble('Quantas <b>pessoas</b> (aprox.)?');
-    box.appendChild(chips([20,30,40,50,80,100].map(n => ({
-      label: String(n), onClick: () => { state.people = n; next(); }
-    }))));
-  }
-
-  function finishOrcamento() {
-    const recap = `Perfeito! Anotei:<br/>🎀 <b>${state.theme}</b> • 📅 <b>${state.date}</b> • 📍 <b>${state.city}</b> • 👥 <b>${state.people}</b>`;
-    const box = bubble(recap + '<br/>Posso te enviar no WhatsApp agora:');
-    const msg = `Olá! Quero orçamento.
-Tema: ${state.theme}
-Data: ${state.date}
-Cidade: ${state.city}
-Pessoas: ${state.people}`;
-    const btn = document.createElement('a');
-    
-    btn.href = `https://web.whatsapp.com/send?phone=${WA_NUMBER}&text=${encodeURIComponent(msg)}`;
-    btn.target = '_blank'; btn.rel = 'noopener';
-    btn.className = 'inline-flex mt-2 px-4 py-2 rounded-xl bg-green-500 text-white';
-    btn.textContent = 'Enviar no WhatsApp';
-    box.appendChild(btn);
-  }
-
-  // ---- Fluxos específicos ----
-  function startOrcamento() {
-    state.flow = 'orcamento'; state.theme = state.date = state.city = state.people = null;
-    stepTheme(() => stepDate(() => stepCity(() => stepPeople(finishOrcamento))));
-  }
-  function startDisponibilidade() {
-    state.flow = 'dispo'; state.date = state.city = null;
-    stepDate(() => stepCity(() => {
-      const box = bubble('Obrigado! Vou checar a agenda e já te retorno por WhatsApp.');
-      const msg = `Olá! Gostaria de confirmar disponibilidade.
-Data: ${state.date}
-Cidade: ${state.city}`;
-      const a = document.createElement('a');
-      a.href = `https://web.whatsapp.com/send?phone=${WA_NUMBER}&text=${encodeURIComponent(msg)}`;
-      a.target = '_blank'; a.rel = 'noopener';
-      a.className = 'inline-flex mt-2 px-4 py-2 rounded-xl bg-green-500 text-white';
-      a.textContent = 'Confirmar no WhatsApp';
-      box.appendChild(a);
-    }));
-  }
-  function startTemas() {
-    state.flow = 'temas';
-    const box = bubble('Temas mais pedidos: floral, candy, boho, botânico e clean. Quer escolher um?');
-    const options = ['Floral','Candy','Boho','Botânico','Clean'];
-    box.appendChild(chips(options.map(t => ({
-      label: t, onClick: () => { state.theme = t; startOrcamento(); }
-    }))));
-  }
-
-  // ---- Abertura painel ----
-  waBubble?.addEventListener('click', () => {
-    waPanel.classList.remove('hidden');
-  });
-  waClose?.addEventListener('click', () => waPanel.classList.add('hidden'));
-
-  // ---- Botões de “resposta rápida” existentes viram gatilhos de fluxo ----
-  document.querySelectorAll('.wa-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const text = (btn.dataset.q || btn.textContent).toLowerCase();
-      if (text.includes('orçamento')) startOrcamento();
-      else if (text.includes('disponibilidade') || text.includes('datas')) startDisponibilidade();
-      else if (text.includes('tema')) startTemas();
-    });
-  });
-
-  // Mensagem inicial amigável
-  bubble('Oi! Posso ajudar com orçamento, disponibilidade, temas e frete. Use as opções acima 💗');
-})();
-</script>
-<!-- Neve (overlay) -->
+<!-- Overlay de neve + Popup de Natal -->
 <div id="snow" class="snow-overlay" aria-hidden="true"></div>
-<script>
-(function snowfall(){
-  const root = document.getElementById('snow');
-  if (!root) return;
-  const isChristmas = document.body.classList.contains('christmas');
-  if (!isChristmas) return;
-
-  const COUNT = Math.min(100, Math.floor(window.innerWidth / 10));
-  for (let i = 0; i < COUNT; i++){
-    const flake = document.createElement('i');
-    flake.className = 'snowflake';
-    const size = 2 + Math.random()*5;
-    flake.style.width = size+'px';
-    flake.style.height = size+'px';
-    flake.style.left = (Math.random()*100)+'vw';
-    flake.style.animationDelay = (Math.random()*10)+'s';
-    flake.style.animationDuration = (8 + Math.random()*6)+'s, ' + (5 + Math.random()*3)+'s';
-    root.appendChild(flake);
-  }
-})();
-</script>
-    <!-- CTA Natal: Popup Oferta -->
 <div id="xmas-offer" class="fixed inset-0 z-[70] hidden" aria-hidden="true">
   <div class="absolute inset-0 bg-black/50"></div>
-
-  <div role="dialog" aria-modal="true" aria-labelledby="xmas-offer-title"
-       class="relative mx-auto max-w-md w-[92%] mt-24 rounded-2xl overflow-hidden shadow-2xl">
-    <!-- topo decorativo -->
+  <div role="dialog" aria-modal="true" aria-labelledby="xmas-offer-title" class="relative mx-auto max-w-md w-[92%] mt-24 rounded-2xl overflow-hidden shadow-2xl">
     <div class="h-2 bg-gradient-to-r from-rose-700 via-yellow-400 to-emerald-700"></div>
-
     <div class="bg-white p-5 md:p-6 relative">
-      <button id="xmas-offer-close" aria-label="Fechar" class="absolute right-3 top-3 rounded-lg p-2 hover:bg-slate-100">
-        ✕
-      </button>
-
-      <div class="flex items-center gap-3">
-        <span class="text-2xl">🎄</span>
-        <h3 id="xmas-offer-title" class="font-serif text-2xl text-rose-900">Especial de Natal</h3>
-      </div>
-
-      <p class="mt-2 text-slate-700">
-        Ganhe <b>5% OFF</b> na locação de peças para eventos confirmados até <span class="underline decoration-rose-300" id="xmas-deadline"></span>.
-      </p>
-
-      <!-- Cupom -->
+      <button id="xmas-offer-close" aria-label="Fechar" class="absolute right-3 top-3 rounded-lg p-2 hover:bg-slate-100">✕</button>
+      <div class="flex items-center gap-3"><span class="text-2xl">🎄</span><h3 id="xmas-offer-title" class="font-serif text-2xl text-rose-900">Especial de Natal</h3></div>
+      <p class="mt-2 text-slate-700">Ganhe <b>5% OFF</b> na locação de peças para eventos confirmados até <span class="underline decoration-rose-300" id="xmas-deadline"></span>.</p>
       <div class="mt-4 flex items-stretch gap-2">
         <code id="xmas-coupon" class="flex-1 grid place-items-center rounded-xl border border-rose-200 bg-rose-50 text-rose-800 font-semibold px-3 py-2">NATAL5</code>
         <button id="xmas-copy" class="rounded-xl px-3 py-2 bg-rose-600 text-white font-semibold hover:opacity-90">Copiar</button>
       </div>
       <p class="mt-2 text-xs text-slate-500">Mostre este cupom no WhatsApp para aplicar o desconto.</p>
-
-      <!-- CTA WhatsApp -->
-      <a id="xmas-wa" target="_blank" rel="noopener"
-         class="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 text-white py-3 font-semibold hover:opacity-95">
+      <a id="xmas-wa" target="_blank" rel="noopener" class="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 text-white py-3 font-semibold hover:opacity-95">
         Pedir orçamento com desconto
       </a>
-
-      <!-- Observações -->
       <ul class="mt-4 text-xs text-slate-500 list-disc pl-5 space-y-1">
         <li>Válido para novas reservas realizadas no período da campanha.</li>
         <li>Desconto aplicado no fechamento do pedido mediante disponibilidade de agenda.</li>
@@ -1001,107 +394,12 @@ Cidade: ${state.city}`;
     </div>
   </div>
 </div>
-<script>
-(function xmasOffer(){
-  // Só ativa em modo Natal
-  if (!document.body.classList.contains('christmas')) return;
 
-  const WA_NUMBER = '5524999995793';
-  const COUPON = 'NATAL5';
-  const OFFER_DEADLINE = (()=>{
-    // Ex.: até 31/12 do ano atual
-    const y = new Date().getFullYear();
-    return new Date(y, 11, 31, 23, 59, 59); // 31 dez, 23:59:59
-  })();
-
-  const $root   = document.getElementById('xmas-offer');
-  const $dialog = $root?.querySelector('[role="dialog"]');
-  const $close  = document.getElementById('xmas-offer-close');
-  const $coupon = document.getElementById('xmas-coupon');
-  const $copy   = document.getElementById('xmas-copy');
-  const $wa     = document.getElementById('xmas-wa');
-  const $deadline = document.getElementById('xmas-deadline');
-  if (!$root || !$dialog || !$wa) return;
-
-  // Data limite formatada (pt-BR)
-  try {
-    $deadline.textContent = OFFER_DEADLINE.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric' });
-  } catch(e){ $deadline.textContent = '31/12'; }
-
-  // Constrói link WhatsApp (mobile/desktop)
-  const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
-  const waBase = isMobile ? 'https://api.whatsapp.com/send' : 'https://web.whatsapp.com/send';
-  const msg = `Olá! Quero aproveitar a oferta de Natal 🎄
-Cupom: ${COUPON}
-Evento: [data] • [cidade] • [tema]
-Poderiam verificar disponibilidade e me enviar o orçamento?`;
-  $wa.href = `${waBase}?phone=${WA_NUMBER}&text=${encodeURIComponent(msg)}`;
-
-  // A11y: trap focus básico
-  let lastFocused = null;
-  function open() {
-    if (sessionStorage.getItem('xmas_offer_seen') === '1') return; // não repetir na sessão
-    $root.classList.remove('hidden');
-    $root.removeAttribute('aria-hidden');
-    lastFocused = document.activeElement;
-    setTimeout(()=> $close?.focus(), 0);
-    document.addEventListener('keydown', onKey);
-    sessionStorage.setItem('xmas_offer_seen','1');
-  }
-  function close() {
-    $root.classList.add('hidden');
-    $root.setAttribute('aria-hidden','true');
-    document.removeEventListener('keydown', onKey);
-    lastFocused && lastFocused.focus?.();
-  }
-  function onKey(e){
-    if (e.key === 'Escape') close();
-    // focus loop simples
-    if (e.key === 'Tab') {
-      const focusables = $dialog.querySelectorAll('a,button,input,textarea,select,[tabindex]:not([tabindex="-1"])');
-      if (!focusables.length) return;
-      const first = focusables[0], last = focusables[focusables.length-1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    }
-  }
-
-  // Interações
-  $close?.addEventListener('click', close);
-  $root.querySelector('.absolute.inset-0')?.addEventListener('click', close);
-  $copy?.addEventListener('click', async ()=>{
-    try {
-      await navigator.clipboard.writeText(COUPON);
-      $copy.textContent = 'Copiado!';
-      setTimeout(()=> $copy.textContent = 'Copiar', 1800);
-    } catch(e) {
-      $copy.textContent = 'Falhou :(';
-      setTimeout(()=> $copy.textContent = 'Copiar', 1800);
-    }
-  });
-
-  // Regras de exibição: 6s, scroll 50%, exit-intent
-  const showAfter = setTimeout(open, 6000);
-  let scrolled = false;
-  const onScroll = () => {
-    if (scrolled) return;
-    const pct = (window.scrollY || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - innerHeight);
-    if (pct >= 0.5) { scrolled = true; open(); window.removeEventListener('scroll', onScroll); }
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  let exitArmed = true;
-  document.addEventListener('mousemove', (e) => {
-    if (!exitArmed) return;
-    if (e.clientY < 10) { open(); exitArmed = false; }
-  });
-
-  // Se a oferta já expirou, não exibe
-  if (Date.now() > +OFFER_DEADLINE) {
-    clearTimeout(showAfter);
-    window.removeEventListener('scroll', onScroll);
-  }
-})();
-</script>
+<!-- JS modular (compartilhado) -->
+<script type="module" src="/assets/js/core.js"></script>
+<script type="module" src="/assets/js/gallery-rotator.js"></script>
+<script type="module" src="/assets/js/whatsapp-bot.js"></script>
+<script type="module" src="/assets/js/christmas.js"></script>
+<script type="module" src="/assets/js/xmas-offer.js"></script>
 </body>
 </html>
