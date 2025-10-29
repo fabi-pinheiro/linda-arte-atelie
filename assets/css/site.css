@@ -1,1 +1,59 @@
 
+:root{ --radius:16px }
+
+/* Utilidades do site */
+.glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.5) }
+.fade-in { opacity:0; transform: translateY(12px); transition: all .7s ease }
+.fade-in.is-visible{ opacity:1; transform: translateY(0) }
+.grid-auto-fit{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem }
+.button-cta { border-radius:9999px; padding:.9rem 1.2rem; font-weight:600 }
+.whatsapp-bubble { position:fixed; right:18px; bottom:18px; z-index:60 }
+.whatsapp-panel { position:fixed; right:90px; bottom:18px; z-index:60; width:min(360px,90vw); max-height:70vh; overflow:hidden; border-radius:16px }
+.lazy { filter: blur(10px); transition: filter .5s ease }
+.lazy.loaded { filter: blur(0) }
+
+/* ===== Tema de Natal ===== */
+.christmas { --xmas-red:#b91c1c; --xmas-green:#065f46; --xmas-gold:#f59e0b; --xmas-snow:#ffffff; }
+.christmas header.sticky { background: rgba(255,255,255,.85); border-color: rgba(245,158,11,.35); }
+.christmas h1, .christmas h2, .christmas h3, .christmas .font-serif { color: var(--xmas-green) !important; }
+.christmas .text-rose-900 { color: var(--xmas-green) !important; }
+.christmas .text-rose-700, .christmas .text-rose-700\/80 { color: #166534 !important; }
+.christmas .button-cta { background-image: linear-gradient(135deg,var(--xmas-green),#0f766e); color:#fff!important; border:none; box-shadow: 0 10px 30px rgba(6,95,70,.25); }
+.christmas a.button-cta.bg-rose-600 { background-image: linear-gradient(135deg,var(--xmas-red),#dc2626); }
+.christmas .button-cta:hover { filter: saturate(1.1) brightness(1.02); }
+.christmas .border-rose-200, .christmas .border-rose-100 { border-color: rgba(245,158,11,.35) !important; }
+.christmas .bg-rose-50, .christmas .bg-rose-50\/60 { background-color: rgba(245,158,11,.06) !important; }
+.christmas section.relative > .absolute.inset-0 > .absolute.inset-0 {
+  background: linear-gradient(120deg, rgba(185,28,28,.28), rgba(245,158,11,.22), rgba(6,95,70,.28));
+}
+.christmas .shadow-soft { box-shadow: 0 12px 30px rgba(6,95,70,.08), 0 2px 10px rgba(185,28,28,.05) !important; }
+.christmas .rounded-2xl { border: 1px solid rgba(6,95,70,.07); }
+.christmas .whatsapp-bubble button { box-shadow: 0 0 0 4px rgba(245,158,11,.35); position:relative; }
+.christmas .whatsapp-bubble button::after { content:"🎀"; position:absolute; transform: translate(12px,-12px); font-size:14px; }
+.christmas footer { border-color: rgba(245,158,11,.25) !important; }
+
+/* Neve */
+.snow-overlay { pointer-events:none; position:fixed; inset:0; z-index:30; overflow:hidden; }
+.snowflake {
+  position:absolute; top:-10px; width:6px; height:6px; border-radius:50%; background: var(--xmas-snow);
+  opacity:.9; filter: drop-shadow(0 0 4px rgba(255,255,255,.9));
+  animation-name: fall, sway; animation-duration: 10s, 6s; animation-iteration-count: infinite;
+  animation-timing-function: linear, ease-in-out;
+}
+@keyframes fall { to { transform: translateY(110vh); } }
+@keyframes sway { 0%{ margin-left:0 } 50%{ margin-left:20px } 100%{ margin-left:0 } }
+@media (max-width: 480px){
+  .snowflake { opacity:.75; animation-duration: 9s, 5.5s; }
+}
+
+/* Popup Natal refinado */
+.christmas #xmas-offer [role="dialog"] {
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.94));
+  border: 1px solid rgba(6,95,70,.12);
+  box-shadow: 0 20px 60px rgba(6,95,70,.18), 0 8px 24px rgba(185,28,28,.10);
+}
+.christmas #xmas-offer .h-2 { filter: drop-shadow(0 6px 10px rgba(185,28,28,.25)); }
+
+/* Transição suave do rotator */
+#galeria-rotativa img { transition: opacity 450ms ease; opacity: 1; }
+#galeria-rotativa img.is-fading { opacity: 0; }
