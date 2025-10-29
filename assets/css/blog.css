@@ -10,6 +10,7 @@
   --maxw:1080px;
 }
 
+
 html,body{margin:0;padding:0}
 body{
   font:16px/1.65 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -114,3 +115,55 @@ code{ background:#f3f4f6; border:1px solid #e5e7eb; border-radius:8px; padding:2
 html{ scroll-behavior:smooth }
 .lazy{ filter:blur(10px); transition:filter .5s ease }
 .lazy.loaded{ filter:blur(0) }
+
+/* === BLOG HEADER HOTFIX === */
+:root { --header-h: 80px; }
+
+/* Fundo sólido para não “vazar” o gradiente do hero por baixo */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;               /* antes era rgba(...) */
+  backdrop-filter: none;           /* remove blur para nitidez do logo */
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Altura e alinhamento perfeitos */
+.site-header .wrap{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 16px;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Logo um pouco maior e nítido */
+.brand{ display:flex; align-items:center; gap:10px; color:#0f172a; text-decoration:none; }
+.brand img{ height: 42px; width: auto; }     /* (antes 34px) */
+
+/* Navegação com altura fixa */
+.nav{ margin-left: auto; display: flex; align-items: center; gap: 18px; }
+.nav a{
+  display: inline-flex;
+  align-items: center;
+  height: 40px;                   /* altura igual p/ todos */
+  padding: 0 10px;
+  line-height: 1;                 /* evita “inflar” verticalmente */
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Botão CTA do header do mesmo tamanho da barra */
+.nav a.cta{
+  height: 40px;                   /* igual aos links */
+  padding: 0 16px;
+  border-radius: 9999px;
+  background: #f472b6;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(244,114,182,.25);
+}
+.nav a.cta:hover{ filter: brightness(1.05); }
+
