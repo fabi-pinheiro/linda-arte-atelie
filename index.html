@@ -94,6 +94,14 @@
     .lazy { filter: blur(10px); transition: filter .5s ease }
     .lazy.loaded { filter: blur(0) }
     /* ================== TEMA DE NATAL ================== */
+    /* Popup Natal só estiliza quando o tema Christmas estiver ativo */
+.christmas #xmas-offer [role="dialog"] {
+  background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(255,255,255,.94));
+  border: 1px solid rgba(6,95,70,.12);
+  box-shadow: 0 20px 60px rgba(6,95,70,.18), 0 8px 24px rgba(185,28,28,.10);
+}
+.christmas #xmas-offer .h-2 { filter: drop-shadow(0 6px 10px rgba(185,28,28,.25)); }
+
 .christmas { --xmas-red:#b91c1c; --xmas-green:#065f46; --xmas-gold:#f59e0b; --xmas-snow:#ffffff; }
 
 /* Header com tom translúcido e borda dourada */
@@ -176,7 +184,7 @@
 
   </style>
 </head>
-<body class="bg-rose-50 text-slate-800 antialiased" style="overflow-x: hidden">
+<body class="bg-rose-50 text-slate-800 antialiased christmas" style="overflow-x: hidden">
   <!-- ======= Header / Navbar ======= -->
 <!-- ======= HEADER (maior, logo destacada) ======= -->
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-rose-200/50 shadow-sm">
@@ -223,7 +231,7 @@
   <!-- ======= Hero ======= -->
   <section class="relative overflow-hidden">
     <div class="absolute inset-0">
-      <img alt="Mesa posta alegre" loading="lazy" class="w-full h-full object-cover" src="https://img.freepik.com/fotos-premium/belas-decoracoes-de-banho-de-bebe-perto-de-uma-parede-colorida_1091270-25699.jpg?w=2000"/>
+      <img alt="Mesa posta alegre" loading="lazy" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?q=80&w=2000&auto=format&fit=crop"/>
       <div class="absolute inset-0 bg-gradient-to-br from-rose-500/30 via-rose-300/30 to-transparent"></div>
     </div>
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-36 grid md:grid-cols-2 gap-10 items-center">
@@ -925,7 +933,7 @@ Cidade: ${state.city}`;
   bubble('Oi! Posso ajudar com orçamento, disponibilidade, temas e frete. Use as opções acima 💗');
 })();
 </script>
-<!-- Neve (overlay)
+<!-- Neve (overlay) -->
 <div id="snow" class="snow-overlay" aria-hidden="true"></div>
 <script>
 (function snowfall(){
@@ -947,6 +955,152 @@ Cidade: ${state.city}`;
     root.appendChild(flake);
   }
 })();
-</script> -->
+</script>
+    <!-- CTA Natal: Popup Oferta -->
+<div id="xmas-offer" class="fixed inset-0 z-[70] hidden" aria-hidden="true">
+  <div class="absolute inset-0 bg-black/50"></div>
+
+  <div role="dialog" aria-modal="true" aria-labelledby="xmas-offer-title"
+       class="relative mx-auto max-w-md w-[92%] mt-24 rounded-2xl overflow-hidden shadow-2xl">
+    <!-- topo decorativo -->
+    <div class="h-2 bg-gradient-to-r from-rose-700 via-yellow-400 to-emerald-700"></div>
+
+    <div class="bg-white p-5 md:p-6 relative">
+      <button id="xmas-offer-close" aria-label="Fechar" class="absolute right-3 top-3 rounded-lg p-2 hover:bg-slate-100">
+        ✕
+      </button>
+
+      <div class="flex items-center gap-3">
+        <span class="text-2xl">🎄</span>
+        <h3 id="xmas-offer-title" class="font-serif text-2xl text-rose-900">Especial de Natal</h3>
+      </div>
+
+      <p class="mt-2 text-slate-700">
+        Ganhe <b>10% OFF</b> na locação de peças para eventos confirmados até <span class="underline decoration-rose-300" id="xmas-deadline"></span>.
+      </p>
+
+      <!-- Cupom -->
+      <div class="mt-4 flex items-stretch gap-2">
+        <code id="xmas-coupon" class="flex-1 grid place-items-center rounded-xl border border-rose-200 bg-rose-50 text-rose-800 font-semibold px-3 py-2">NATAL10</code>
+        <button id="xmas-copy" class="rounded-xl px-3 py-2 bg-rose-600 text-white font-semibold hover:opacity-90">Copiar</button>
+      </div>
+      <p class="mt-2 text-xs text-slate-500">Mostre este cupom no WhatsApp para aplicar o desconto.</p>
+
+      <!-- CTA WhatsApp -->
+      <a id="xmas-wa" target="_blank" rel="noopener"
+         class="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 text-white py-3 font-semibold hover:opacity-95">
+        Pedir orçamento com desconto
+      </a>
+
+      <!-- Observações -->
+      <ul class="mt-4 text-xs text-slate-500 list-disc pl-5 space-y-1">
+        <li>Válido para novas reservas realizadas no período da campanha.</li>
+        <li>Desconto aplicado no fechamento do pedido mediante disponibilidade de agenda.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+(function xmasOffer(){
+  // Só ativa em modo Natal
+  if (!document.body.classList.contains('christmas')) return;
+
+  const WA_NUMBER = '5524999995793';
+  const COUPON = 'NATAL10';
+  const OFFER_DEADLINE = (()=>{
+    // Ex.: até 31/12 do ano atual
+    const y = new Date().getFullYear();
+    return new Date(y, 11, 31, 23, 59, 59); // 31 dez, 23:59:59
+  })();
+
+  const $root   = document.getElementById('xmas-offer');
+  const $dialog = $root?.querySelector('[role="dialog"]');
+  const $close  = document.getElementById('xmas-offer-close');
+  const $coupon = document.getElementById('xmas-coupon');
+  const $copy   = document.getElementById('xmas-copy');
+  const $wa     = document.getElementById('xmas-wa');
+  const $deadline = document.getElementById('xmas-deadline');
+  if (!$root || !$dialog || !$wa) return;
+
+  // Data limite formatada (pt-BR)
+  try {
+    $deadline.textContent = OFFER_DEADLINE.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric' });
+  } catch(e){ $deadline.textContent = '31/12'; }
+
+  // Constrói link WhatsApp (mobile/desktop)
+  const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+  const waBase = isMobile ? 'https://api.whatsapp.com/send' : 'https://web.whatsapp.com/send';
+  const msg = `Olá! Quero aproveitar a oferta de Natal 🎄
+Cupom: ${COUPON}
+Evento: [data] • [cidade] • [tema]
+Poderiam verificar disponibilidade e me enviar o orçamento?`;
+  $wa.href = `${waBase}?phone=${WA_NUMBER}&text=${encodeURIComponent(msg)}`;
+
+  // A11y: trap focus básico
+  let lastFocused = null;
+  function open() {
+    if (sessionStorage.getItem('xmas_offer_seen') === '1') return; // não repetir na sessão
+    $root.classList.remove('hidden');
+    $root.removeAttribute('aria-hidden');
+    lastFocused = document.activeElement;
+    setTimeout(()=> $close?.focus(), 0);
+    document.addEventListener('keydown', onKey);
+    sessionStorage.setItem('xmas_offer_seen','1');
+  }
+  function close() {
+    $root.classList.add('hidden');
+    $root.setAttribute('aria-hidden','true');
+    document.removeEventListener('keydown', onKey);
+    lastFocused && lastFocused.focus?.();
+  }
+  function onKey(e){
+    if (e.key === 'Escape') close();
+    // focus loop simples
+    if (e.key === 'Tab') {
+      const focusables = $dialog.querySelectorAll('a,button,input,textarea,select,[tabindex]:not([tabindex="-1"])');
+      if (!focusables.length) return;
+      const first = focusables[0], last = focusables[focusables.length-1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+
+  // Interações
+  $close?.addEventListener('click', close);
+  $root.querySelector('.absolute.inset-0')?.addEventListener('click', close);
+  $copy?.addEventListener('click', async ()=>{
+    try {
+      await navigator.clipboard.writeText(COUPON);
+      $copy.textContent = 'Copiado!';
+      setTimeout(()=> $copy.textContent = 'Copiar', 1800);
+    } catch(e) {
+      $copy.textContent = 'Falhou :(';
+      setTimeout(()=> $copy.textContent = 'Copiar', 1800);
+    }
+  });
+
+  // Regras de exibição: 6s, scroll 50%, exit-intent
+  const showAfter = setTimeout(open, 6000);
+  let scrolled = false;
+  const onScroll = () => {
+    if (scrolled) return;
+    const pct = (window.scrollY || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - innerHeight);
+    if (pct >= 0.5) { scrolled = true; open(); window.removeEventListener('scroll', onScroll); }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  let exitArmed = true;
+  document.addEventListener('mousemove', (e) => {
+    if (!exitArmed) return;
+    if (e.clientY < 10) { open(); exitArmed = false; }
+  });
+
+  // Se a oferta já expirou, não exibe
+  if (Date.now() > +OFFER_DEADLINE) {
+    clearTimeout(showAfter);
+    window.removeEventListener('scroll', onScroll);
+  }
+})();
+</script>
 </body>
 </html>
