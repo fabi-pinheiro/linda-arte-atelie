@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guia completo para planejar sua festa: mesa posta, decoração e locação | Linda Arte Ateliê</title>
+  <meta name="description" content="Aprenda como organizar uma festa inesquecível com mesa posta, decoração e locação de peças. Dicas práticas, checklist e ideias para diferentes temas — do chá de bebê ao Réveillon." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.lindaarteatelie.com.br/blog/guia-festa-mesa-posta-decoracao-locacao" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Linda Arte Ateliê" />
+  <meta property="og:title" content="Guia completo para planejar sua festa: mesa posta, decoração e locação" />
+  <meta property="og:description" content="Dicas práticas, checklist e ideias para diferentes temas — do chá de bebê ao Réveillon." />
+  <meta property="og:url" content="https://www.lindaarteatelie.com.br/blog/guia-festa-mesa-posta-decoracao-locacao" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1556909211-3698e19f3291?q=80&w=1600&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/LOGO.png" type="image/png"/>
+
+  <!-- Styles -->
+  <style>
+    :root{
+      --bg:#f9fafb;
+      --paper:#ffffff;
+      --ink:#0f172a;
+      --muted:#6b7280;
+      --brand:#f472b6;         /* sua cor rosa */
+      --brand-ink:#9d174d;
+      --gold:#f59e0b;
+      --radius:18px;
+      --maxw: 1080px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font: 16px/1.65 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+    a{ color: var(--brand-ink); text-decoration: none }
+    a:hover{ text-decoration: underline }
+    img{ max-width: 100%; display: block }
+
+    /* Header */
+    .site-header{
+      position: sticky; top:0; z-index:50;
+      background: rgba(255,255,255,.75); backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 16px }
+    .site-header .wrap{ display:flex; align-items:center; gap:16px; height:70px }
+    .brand{ display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none }
+    .brand img{ height:34px; width:auto }
+    .brand span{ font-weight:700 }
+    .nav{ margin-left:auto; display:flex; gap:16px }
+    .nav a{ color:#111827; font-weight:600 }
+    .nav a.cta{
+      background: var(--brand); color:#fff; padding:.6rem .9rem; border-radius:9999px; text-decoration:none;
+      box-shadow: 0 10px 30px rgba(244,114,182,.25);
+    }
+    .nav a.cta:hover{ filter:brightness(1.05) }
+
+    /* Reading progress bar */
+    .progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--brand), var(--gold));
+      z-index: 60;
+    }
+
+    /* Article card */
+    .hero{
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(244,114,182,.15), transparent 60%),
+                  radial-gradient(900px 500px at 90% -10%, rgba(245,158,11,.12), transparent 60%);
+      padding: 32px 0 0 0;
+    }
+    .article{
+      background: var(--paper);
+      max-width: var(--maxw);
+      margin: -120px auto 40px;
+      border-radius: var(--radius);
+      box-shadow: 0 20px 60px rgba(2,6,23,.08);
+      overflow: hidden;
+    }
+    .cover{
+      aspect-ratio: 16/7; width:100%; object-fit: cover;
+      filter: saturate(1.02);
+    }
+    .article-body{ padding: 28px; }
+    @media (min-width: 860px){ .article-body{ padding: 40px 56px } }
+
+    h1{ font: 700 clamp(28px, 3.2vw, 40px)/1.2 "Playfair Display", Georgia, serif; margin: 8px 0 10px }
+    h2{ font: 700 clamp(22px, 2.4vw, 28px)/1.25 "Playfair Display", Georgia, serif; margin: 28px 0 12px }
+    h3{ font-weight:700; margin: 22px 0 8px; }
+    p{ margin: 10px 0 }
+    .muted{ color: var(--muted) }
+    .lead{ font-size: 1.1rem; color:#374151 }
+    .meta{
+      display:flex; flex-wrap:wrap; gap:12px; align-items:center; color:var(--muted); font-size:.94rem
+    }
+    .badge{ background:#fff1f5; color:#9d174d; border:1px solid #fecdd3; border-radius: 9999px; padding: .2rem .6rem; font-weight:600; font-size:.78rem }
+
+    /* Layout: main + aside (TOC) */
+    .grid{
+      display:grid; gap:36px;
+      grid-template-columns: minmax(0,1fr);
+    }
+    @media (min-width: 1080px){
+      .grid{
+        grid-template-columns: minmax(0,1fr) 300px;
+      }
+      .aside{ position: sticky; top: 90px; align-self: start; max-height: calc(100vh - 120px); overflow:auto; padding-right: 8px }
+    }
+
+    /* TOC */
+    .toc{
+      background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 14px; padding: 14px;
+    }
+    .toc h3{ margin: 6px 0 8px; font-size: 1rem }
+    .toc ol{ margin:0; padding-left: 18px; display:grid; gap:6px; font-size:.95rem }
+    .toc a{ color:#374151; text-decoration:none }
+    .toc a:hover{ color:var(--brand-ink); text-decoration: underline }
+
+    /* Utility blocks */
+    .note{
+      background: #fff7ed; border:1px solid #fed7aa; color:#7c2d12; padding:12px 14px; border-radius: 12px; font-size:.95rem
+    }
+    .checklist input{ accent-color: var(--brand); }
+    .checklist li{ margin:.3rem 0 }
+
+    /* Share bar */
+    .share{ display:flex; flex-wrap: wrap; gap:10px; align-items:center; margin-top: 8px }
+    .share a{
+      display:inline-flex; align-items:center; gap:8px;
+      background:#111827; color:#fff; padding:.5rem .75rem; border-radius: 10px; text-decoration:none; font-weight:600; font-size:.92rem;
+    }
+    .share a.wa{ background:#16a34a } .share a.tw{ background:#2563eb } .share a.fb{ background:#0ea5e9 }
+    .share a:hover{ filter: brightness(1.05) }
+
+    /* CTA box */
+    .cta{
+      margin: 20px 0; padding: 18px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--brand), #db2777);
+      color: #fff; display:flex; flex-wrap:wrap; align-items:center; gap:12px;
+    }
+    .cta a{
+      background:#fff; color:#111827; padding:.6rem .9rem; border-radius:9999px; text-decoration:none; font-weight:700
+    }
+    .cta a:hover{ filter:brightness(0.98) }
+
+    /* FAQ */
+    details{ border-top:1px solid #e5e7eb; padding: 12px 0 }
+    details[open] summary{ color: var(--brand-ink) }
+    summary{ cursor:pointer; font-weight:600; list-style: none }
+    summary::-webkit-details-marker{ display:none }
+
+    /* Footer */
+    .site-footer{
+      border-top:1px solid #e5e7eb; color:#6b7280; padding: 28px 0; background:#fff;
+    }
+
+    /* Code inline tag */
+    code{ background:#f3f4f6; border:1px solid #e5e7eb; border-radius:8px; padding: 2px 6px }
+
+    /* Smooth anchor scroll */
+    html{ scroll-behavior: smooth }
+
+    /* Lazy images blur-up */
+    .lazy{ filter: blur(10px); transition: filter .5s ease }
+    .lazy.loaded{ filter: blur(0) }
+  </style>
+</head>
+<body>
+
+  <div class="progress" id="progress"></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <img src="/LOGO.png" alt="Linda Arte Ateliê" />
+        <span>Linda Arte Ateliê</span>
+      </a>
+      <nav class="nav">
+        <a href="/#servicos">Serviços</a>
+        <a href="/#galeria">Galeria</a>
+        <a href="/#contato" class="cta">Orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <article class="article" itemscope itemtype="https://schema.org/Article">
+      <img class="cover" alt="Mesa posta elegante com elementos dourados e folhagens verdes"
+           src="https://images.unsplash.com/photo-1556909211-3698e19f3291?q=80&w=1600&auto=format&fit=crop"
+           itemprop="image"/>
+
+      <div class="article-body">
+        <header>
+          <div class="meta">
+            <span class="badge">Guia</span>
+            <time itemprop="datePublished" datetime="2025-10-29">29 out 2025</time>
+            <span>•</span>
+            <span id="readtime">~6 min de leitura</span>
+          </div>
+          <h1 itemprop="headline">Guia completo para planejar a sua festa: mesa posta, decoração e locação</h1>
+          <p class="lead">Organizar uma festa pode ser simples e prazeroso quando você tem um plano. Neste guia prático, reunimos tudo o que os clientes do <strong>Linda Arte Ateliê</strong> mais perguntam: <em>como escolher o tema</em>, <em>qual mesa posta usar</em>, <em>o que incluir na decoração</em> e <em>como economizar alugando as peças certas</em>.</p>
+        </header>
+
+        <section class="grid">
+          <!-- MAIN CONTENT -->
+          <div>
+            <p class="note">Dica rápida: se quiser pular direto para um orçamento, fale com a gente no <a href="#contato">WhatsApp</a>. Nosso atendimento é rápido e personalizado.</p>
+
+            <h2 id="defina-o-tema">1) Defina o objetivo e o tema</h2>
+            <p>Antes de qualquer compra, pergunte-se:</p>
+            <ul>
+              <li>Qual é o <strong>tipo de evento</strong>? (aniversário infantil, chá revelação, noivado…)</li>
+              <li>Onde será? (casa, salão, área externa)</li>
+              <li>Qual o <strong>clima</strong> desejado? (clean, floral, boho, minimalista)</li>
+            </ul>
+            <p><strong>Escolha do tema</strong></p>
+            <ul>
+              <li><strong>Infantil</strong>: cores vivas, painéis temáticos e elementos lúdicos.</li>
+              <li><strong>Adulto</strong>: paletas sóbrias, texturas (linho, juta, madeira) e flores de estação.</li>
+              <li><strong>Fim de ano</strong>: base neutra (branco/creme) e destaque em <em>dourado</em> (Réveillon) ou <em>verde/vermelho</em> (Natal).</li>
+            </ul>
+            <p>💡 <em>Inspiração:</em> veja referências reais na nossa <a href="/#galeria">galeria</a>.</p>
+
+            <h2 id="mesa-posta">2) Mesa posta: o coração da composição</h2>
+            <p>A <strong>mesa posta</strong> organiza o visual e facilita o serviço. Comece pela base e vá subindo camadas:</p>
+            <p><strong>Camada 1 — Têxteis</strong></p>
+            <ul>
+              <li>Toalha lisa ou trilho com bom caimento.</li>
+              <li>Jogos americanos para delimitar lugares sem pesar.</li>
+            </ul>
+            <p><strong>Camada 2 — Louças e talheres</strong></p>
+            <ul>
+              <li>Prato raso + sobremesa (se houver bolo/mini docinhos à mesa).</li>
+              <li>Talheres: garfo à esquerda, faca à direita, sobremesa acima.</li>
+              <li>Copos/taças: água ao centro superior direito; vinho/espumante à direita.</li>
+            </ul>
+            <p><strong>Camada 3 — Destaques</strong></p>
+            <ul>
+              <li>Sousplats, guardanapos de tecido com porta-guardanapo e arranjos baixos.</li>
+            </ul>
+            <p><em>Economize</em>: alugue peças-chave como boleiras, sousplats, vasos e bandejas. Veja nossos <a href="/#servicos">pacotes e locação</a>.</p>
+
+            <h2 id="decoracao">3) Decoração: pontos focais que fazem diferença</h2>
+            <p>Distribua a atenção em três pontos:</p>
+            <ol>
+              <li><strong>Painel/Fundo de mesa</strong> — define o tema.</li>
+              <li><strong>Mesa principal</strong> — peças de alturas variadas criam movimento.</li>
+              <li><strong>Detalhes de circulação</strong> — pequenos arranjos, plaquinhas e velas.</li>
+            </ol>
+            <p><strong>Proporção</strong>: regra 1–2–3 por cada 1m de mesa (1 peça alta, 2 médias, 3 baixas).</p>
+
+            <h2 id="papelaria">4) Papelaria personalizada</h2>
+            <ul>
+              <li>Convite digital, menu, tags, toppers.</li>
+              <li>Caixinhas e sacolinhas com nome/data/paleta do evento.</li>
+            </ul>
+
+            <h2 id="checklists">5) Checklists prontos</h2>
+            <h3>30 dias antes</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox"> Definir data, horário e local</label></li>
+              <li><label><input type="checkbox"> Escolher tema e paleta</label></li>
+              <li><label><input type="checkbox"> Reservar locação de peças e painel</label></li>
+              <li><label><input type="checkbox"> Solicitar orçamento</label></li>
+              <li><label><input type="checkbox"> Listar convidados</label></li>
+            </ul>
+            <h3>7 dias antes</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox"> Confirmar agenda e retirada/entrega</label></li>
+              <li><label><input type="checkbox"> Revisar lista de peças e papelaria</label></li>
+              <li><label><input type="checkbox"> Comprar bebidas/descartáveis</label></li>
+              <li><label><input type="checkbox"> Separar mesa/apoios extras</label></li>
+            </ul>
+            <h3>Dia do evento</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox"> Montar painel e mesa principal</label></li>
+              <li><label><input type="checkbox"> Posicionar arranjos e iluminação</label></li>
+              <li><label><input type="checkbox"> Finalizar mesa posta (guardanapos/taças)</label></li>
+              <li><label><input type="checkbox"> Ajustar detalhes e testar fluxo</label></li>
+            </ul>
+
+            <h2 id="investimento">6) Orçamento inteligente: onde investir</h2>
+            <ul>
+              <li><strong>Invista</strong> em peças de destaque e flores de estação.</li>
+              <li><strong>Economize</strong> com bases neutras + locação para o restante.</li>
+              <li><strong>Tempo</strong>: montagem/desmontagem poupa horas.</li>
+            </ul>
+
+            <h2 id="temas">7) Temas que mais pedem</h2>
+            <ul>
+              <li><strong>Floral Romântico</strong>: rosa, verde, dourado claro; rendas e vidro lapidado.</li>
+              <li><strong>Boho</strong>: terracota, areia, madeira; fibras naturais.</li>
+              <li><strong>Candy</strong> (infantil): paleta suave, acrílicos e balões orgânicos.</li>
+              <li><strong>Clean Moderno</strong>: branco, preto, dourado; linhas retas.</li>
+            </ul>
+
+            <h2 id="locacao">8) Por que a locação compensa</h2>
+            <ul>
+              <li><strong>Economia</strong>: paga-se só pelo uso.</li>
+              <li><strong>Variedade</strong>: acesso a acervo amplo e peças exclusivas.</li>
+              <li><strong>Praticidade</strong>: retirada ou entrega programada.</li>
+            </ul>
+
+            <h2 id="preco">9) Quanto custa? (exemplo realista)</h2>
+            <p>Um setup básico de mesa com painel, boleira, bandejas e arranjos pode começar a partir de <strong>R$ 69 – R$ 89</strong> nos nossos <a href="/#ofertas">pacotes</a>. Personalizações e flores variam conforme o projeto.</p>
+
+            <div id="contato" class="cta">
+              <div><strong>Quer que a gente monte tudo pra você?</strong> Envie um “oi” no WhatsApp com data, cidade e tema.</div>
+              <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20mesa%20posta/decora%C3%A7%C3%A3o."
+                 target="_blank" rel="noopener">Falar no WhatsApp</a>
+            </div>
+
+            <h2 id="faq">Perguntas frequentes (FAQ)</h2>
+            <details>
+              <summary>Como funciona o orçamento?</summary>
+              <p>Analisamos seu briefing (tema, data, local, itens) e enviamos proposta de locação, mesa posta e papelaria. Após aprovação, agendamos e confirmamos.</p>
+            </details>
+            <details>
+              <summary>Vocês atendem fora da cidade?</summary>
+              <p>Sim, com taxa de deslocamento conforme a região e disponibilidade de agenda.</p>
+            </details>
+            <details>
+              <summary>Posso alugar só as peças?</summary>
+              <p>Sim. Trabalhamos com locação unitária e pacotes; você pode retirar ou contratar entrega/montagem.</p>
+            </details>
+
+            <div class="share" aria-label="Compartilhar">
+              <span class="muted">Compartilhar:</span>
+              <a class="wa" id="share-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="tw" id="share-tw" href="#" target="_blank" rel="noopener">Twitter/X</a>
+              <a class="fb" id="share-fb" href="#" target="_blank" rel="noopener">Facebook</a>
+              <a id="copy-link" href="#">Copiar link</a>
+            </div>
+          </div>
+
+          <!-- ASIDE TOC -->
+          <aside class="aside">
+            <nav class="toc" id="toc">
+              <h3>Neste artigo</h3>
+              <ol></ol>
+            </nav>
+          </aside>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      © <span id="year"></span> Linda Arte Ateliê — mesa posta, decoração & locação
+    </div>
+  </footer>
+
+  <!-- JSON-LD (Article + FAQ) -->
+  <script type="application/ld+json" id="ld-article">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Guia completo para planejar sua festa: mesa posta, decoração e locação",
+    "image": "https://images.unsplash.com/photo-1556909211-3698e19f3291?q=80&w=1600&auto=format&fit=crop",
+    "author": { "@type": "Organization", "name": "Linda Arte Ateliê" },
+    "publisher": { "@type": "Organization", "name": "Linda Arte Ateliê", "logo": { "@type":"ImageObject", "url": "https://www.lindaarteatelie.com.br/LOGO.png" } },
+    "datePublished": "2025-10-29",
+    "dateModified": "2025-10-29",
+    "mainEntityOfPage": "https://www.lindaarteatelie.com.br/blog/guia-festa-mesa-posta-decoracao-locacao"
+  }
+  </script>
+
+  <script type="application/ld+json" id="ld-faq">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type":"Question","name":"Como funciona o orçamento?","acceptedAnswer":{"@type":"Answer","text":"Analisamos briefing (tema, data, local, itens) e enviamos proposta de locação, mesa posta e papelaria. Após aprovação, agendamos e confirmamos."}},
+      { "@type":"Question","name":"Vocês atendem fora da cidade?","acceptedAnswer":{"@type":"Answer","text":"Sim, com taxa de deslocamento conforme a região e disponibilidade de agenda."}},
+      { "@type":"Question","name":"Posso alugar só as peças?","acceptedAnswer":{"@type":"Answer","text":"Sim. Trabalhamos com locação unitária e pacotes; você pode retirar ou contratar entrega/montagem."}}
+    ]
+  }
+  </script>
+
+  <!-- Scripts -->
+  <script>
+    // Ano
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Barra de progresso de leitura
+    const progress = document.getElementById('progress');
+    const onScroll = () => {
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+      progress.style.width = (scrolled * 100) + '%';
+    };
+    addEventListener('scroll', onScroll, { passive:true });
+
+    // TOC automático (h2 e h3)
+    (function buildTOC(){
+      const toc = document.querySelector('#toc ol');
+      if(!toc) return;
+      const headings = document.querySelectorAll('.article-body h2, .article-body h3');
+      toc.innerHTML = '';
+      headings.forEach((h, idx) => {
+        if(!h.id){ h.id = 'sec-' + (idx+1); }
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#' + h.id;
+        a.textContent = h.textContent.replace(/^[0-9\)\.]+\s*/,'').trim();
+        if(h.tagName === 'H3'){ li.style.marginLeft = '8px'; li.style.fontSize = '.95rem'; }
+        li.appendChild(a); toc.appendChild(li);
+      });
+    })();
+
+    // Leitura estimada (~200 palavras/min)
+    (function readTime(){
+      const body = document.querySelector('.article-body');
+      if(!body) return;
+      const text = body.innerText || '';
+      const words = text.trim().split(/\s+/).length;
+      const mins = Math.max(1, Math.round(words / 200));
+      document.getElementById('readtime').textContent = `~${mins} min de leitura`;
+    })();
+
+    // Compartilhamento
+    (function share(){
+      const url = location.href;
+      const title = document.querySelector('h1')?.textContent || 'Confira este post';
+      const wa = document.getElementById('share-wa');
+      const tw = document.getElementById('share-tw');
+      const fb = document.getElementById('share-fb');
+      const cp = document.getElementById('copy-link');
+
+      if(wa) wa.href = `https://wa.me/?text=${encodeURIComponent(title+' — '+url)}`;
+      if(tw) tw.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+      if(fb) fb.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+      if(cp) cp.addEventListener('click', (e)=>{ e.preventDefault(); navigator.clipboard.writeText(url).then(()=>{ cp.textContent='Link copiado!'; setTimeout(()=>cp.textContent='Copiar link',1800) }) });
+    })();
+
+    // Lazy images with blur-up
+    (function lazy(){
+      const imgs = document.querySelectorAll('img[loading="lazy"], img.lazy');
+      if(!imgs.length) return;
+      const obs = 'IntersectionObserver' in window ? new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(!e.isIntersecting) return;
+          const el = e.target;
+          const ds = el.dataset.src;
+          if(ds){ el.src = ds; }
+          el.onload = () => el.classList.add('loaded');
+          obs.unobserve(el);
+        });
+      },{ rootMargin: '120px' }) : null;
+
+      imgs.forEach(img=>{
+        if(obs) obs.observe(img);
+        else if(img.dataset.src){ img.src = img.dataset.src; }
+      });
+    })();
+  </script>
+</body>
+</html>
