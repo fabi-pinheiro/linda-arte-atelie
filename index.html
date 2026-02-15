@@ -1,405 +1,595 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta name="facebook-domain-verification" content="oz4ol28e9wmsff41a3h7x8ddg5zeas" />
   <meta charset="utf-8" />
   <link rel="icon" type="image/png" href="./LOGO.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ateliê — Festas, Mesa Posta & Decoração | Linda Arte Ateliê</title>
-  <meta name="description" content="Ateliê especializado em festas, mesa posta, locação de peças, arranjos e decoração sob medida. Qualidade artesanal, entrega rápida e atendimento no WhatsApp." />
+  
+  <!-- SEO Local Otimizado para Volta Redonda -->
+  <title>Linda Arte Ateliê - Mesa Posta, Decoração de Festas e Locação em Volta Redonda RJ</title>
+  <meta name="description" content="Ateliê especializado em mesa posta, decoração de festas, locação de peças e papelaria personalizada em Volta Redonda RJ. Pacotes a partir de R$69 com montagem rápida e atendimento via WhatsApp." />
+  <meta name="keywords" content="mesa posta Volta Redonda, decoração festas Volta Redonda, locação peças festa Volta Redonda, chá de bebê Volta Redonda, aniversário infantil Volta Redonda, ateliê decoração RJ Sul Fluminense" />
   <link rel="canonical" href="https://www.lindaarteatelie.com.br" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <meta name="theme-color" content="#f472b6" />
+  <meta name="theme-color" content="#e11d48" />
+  <meta name="geo.region" content="BR-RJ" />
+  <meta name="geo.placename" content="Volta Redonda" />
+  <meta name="geo.position" content="-22.523;-44.104" />
+  <meta name="ICBM" content="-22.523, -44.104" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Ateliê — Festas, Mesa Posta & Decoração | Linda Arte Ateliê" />
-  <meta property="og:description" content="Criações autorais, mesa posta e decoração para todas as ocasiões. Solicite seu orçamento pelo WhatsApp." />
-  <meta property="og:url" content="https://www.lindaarteatelie.com.br" />
-  <meta property="og:site_name" content="Linda Arte Ateliê" />
-  <meta property="og:image" content="./IMGS/image_1.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="./IMGS/image_1.jpg" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Linda Arte Ateliê",
-    "url": "https://www.lindaarteatelie.com.br",
-    "image": "./IMGS/image_1.jpg",
-    "telephone": "+55 24 99999-5793",
-    "priceRange": "$$",
-    "address": {"@type": "PostalAddress","addressCountry": "BR"},
-    "sameAs": [
-      "https://web.whatsapp.com/send?phone=5524999995793",
-      "https://www.instagram.com/"
-    ],
-    "areaServed": "Brasil",
-    "makesOffer": [{"@type":"Offer","name":"Mesa posta"},{"@type":"Offer","name":"Decoração de festas"},{"@type":"Offer","name":"Locação de peças"}]
-  }
-  </script>
-
-  <!-- Tailwind (mantido, já que você usa utilitárias) -->
+  <!-- Tailwind CDN com config customizada -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: {
-              50: '#fff1f5', 100: '#ffe4ed', 200: '#fecdd6', 300: '#fda4af',
-              400: '#fb7185', 500: '#f472b6', 600: '#ec4899', 700: '#db2777',
-              800: '#be185d', 900: '#9d174d'
+            primary: {
+              50: '#fdf2f2',
+              100: '#fde8e8',
+              200: '#fbd5d5',
+              300: '#f8b4b4',
+              400: '#f38e8e',
+              500: '#e11d48',
+              600: '#c81c41',
+              700: '#a11433',
+              800: '#82112b',
+              900: '#670f24'
             }
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'Arial', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
             serif: ['Playfair Display', 'Georgia', 'serif']
           },
-          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.08)' }
+          boxShadow: {
+            soft: '0 4px 20px rgba(0,0,0,0.08)',
+            md: '0 10px 30px rgba(0,0,0,0.1)',
+            lg: '0 20px 50px rgba(0,0,0,0.12)'
+          }
         }
       }
     }
   </script>
 
-  <!-- CSS Global -->
-  <link rel="stylesheet" href="/assets/css/site.css">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Linda Arte Ateliê - Mesa Posta e Decoração de Festas em Volta Redonda RJ" />
+  <meta property="og:description" content="Ateliê em Volta Redonda especializado em mesa posta, locação de peças e decoração para festas, chás e eventos. Orçamento rápido via WhatsApp." />
+  <meta property="og:url" content="https://www.lindaarteatelie.com.br" />
+  <meta property="og:site_name" content="Linda Arte Ateliê" />
+  <meta property="og:image" content="./IMGS/image_1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="./IMGS/image_1.jpg" />
+
+  <!-- JSON-LD LocalBusiness com endereço completo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Linda Arte Ateliê",
+    "description": "Ateliê de mesa posta, decoração de festas e locação de peças em Volta Redonda RJ",
+    "url": "https://www.lindaarteatelie.com.br",
+    "image": "./IMGS/image_1.jpg",
+    "telephone": "+5524999995793",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Volta Redonda",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "-22.523",
+        "longitude": "-44.104"
+      },
+      "geoRadius": "50000"
+    },
+    "sameAs": [
+      "https://web.whatsapp.com/send?phone=5524999995793",
+      "https://www.instagram.com/festanamesavoltaredonda"
+    ],
+    "makesOffer": [
+      {"@type":"Offer","name":"Mesa posta em Volta Redonda"},
+      {"@type":"Offer","name":"Decoração de festas em Volta Redonda"},
+      {"@type":"Offer","name":"Locação de peças para eventos"}
+    ]
+  }
+  </script>
+
+  <style>
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.9s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .card-hover { transition: all 0.4s ease; }
+    .card-hover:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    .btn-primary {
+      background: linear-gradient(135deg, #e11d48 0%, #c81c41 100%);
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover { opacity: 0.92; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(225,29,72,0.3); }
+    .btn-secondary {
+      background: white;
+      color: #e11d48;
+      border: 2px solid #e11d48;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background: #e11d48;
+      color: white;
+    }
+  </style>
 </head>
 
-<!-- DICA: adicione a classe 'christmas' para ativar tema de Natal -->
-<body class="bg-rose-50 text-slate-800 antialiased " style="overflow-x: hidden">
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-rose-200/50 shadow-sm">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 md:h-24 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-4 group" aria-label="Homepage">
-      <div class="relative">
-        <div class="h-14 w-14 md:h-20 md:w-20 grid place-items-center group-hover:scale-105 transition">
-          <img src="./LOGO.png" alt="Linda Arte Ateliê" class="h-10 md:h-14 w-auto object-contain drop-shadow" />
+<body class="bg-gray-50 text-slate-800 antialiased" style="overflow-x: hidden">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-primary-100 shadow-sm">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-5 group">
+                <img src="https://www.lindaarteatelie.com.br/LOGO.png" alt="Linda Arte Ateliê"
+                    class="h-16 w-16 object-contain drop-shadow-md group-hover:scale-105 transition" />
+                <div>
+                    <p class="font-serif text-3xl text-primary-700 leading-tight">Linda Arte Ateliê</p>
+                    <p class="text-sm text-primary-600 -mt-1">festa • mesa posta • décor</p>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-10 text-lg font-medium">
+                <a href="#servicos" class="hover:text-primary-600 transition">Serviços</a>
+                <a href="#galeria" class="hover:text-primary-600 transition">Galeria</a>
+                <a href="./blog/guia-festa-mesa-posta-decoracao-locacao.html"
+                    class="hover:text-primary-600 transition">Blog</a>
+                <a href="#sobre" class="hover:text-primary-600 transition">Sobre</a>
+                <a href="#contato"
+                    class="btn-primary text-white px-7 py-3.5 rounded-full font-semibold shadow-lg">Orçamento</a>
+            </nav>
+            <button class="lg:hidden p-3 rounded-xl bg-primary-50 text-primary-700">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
         </div>
-        <span class="absolute inset-0 -z-10 blur-2xl rounded-3xl bg-rose-300/40"></span>
-      </div>
-      <div>
-        <p class="font-serif text-2xl md:text-3xl text-rose-900 leading-tight">Linda Arte Ateliê</p>
-        <p class="text-xs md:text-sm text-rose-700/80 -mt-1">festa • mesa posta • décor</p>
-      </div>
-    </a>
+    </header>
 
-    <nav class="hidden md:flex items-center gap-7 text-[15px]">
-      <a href="#servicos" class="hover:text-rose-800">Serviços</a>
-      <a href="#galeria" class="hover:text-rose-800">Galeria</a>
-      <a href="./blog/guia-festa-mesa-posta-decoracao-locacao.html" class="hover:text-rose-800">Blog</a>
-      <a href="#sobre" class="hover:text-rose-800">Sobre</a>
-      <a href="#contato" class="inline-flex items-center rounded-full px-4 py-2.5 font-semibold text-white bg-rose-600 shadow hover:opacity-90">
-        Orçamento
-      </a>
-    </nav>
-    <button class="md:hidden inline-flex items-center justify-center h-11 w-11 rounded-2xl bg-white/70 border border-rose-200 text-rose-700 shadow hover:bg-white" aria-label="Abrir menu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
-    </button>
-  </div>
-</header>
-
-<section class="relative overflow-hidden">
-  <div class="absolute inset-0">
-    <img alt="Mesa posta alegre" class="w-full h-full object-cover" src="./IMGS/IMG_01.jpg"/>
-    <div class="absolute inset-0 bg-gradient-to-br from-rose-500/30 via-rose-300/30 to-transparent"></div>
-  </div>
-  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-36 grid md:grid-cols-2 gap-10 items-center">
-    <div class="bg-white/80 p-6 md:p-10 rounded-2xl shadow-soft fade-in">
-      <h1 class="font-serif text-4xl md:text-6xl text-rose-900">Festa na Mesa</h1>
-      <p class="mt-4 text-lg text-slate-700">Locação de peças e decoração personalizada para transformar o seu evento em uma experiência inesquecível.</p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a href="#contato" class="button-cta bg-rose-600 text-white hover:opacity-90">Pedir orçamento</a>
-        <a href="#galeria" class="button-cta bg-white text-rose-900 border border-rose-600/20 hover:border-rose-600">Ver projetos</a>
-      </div>
-      <ul class="mt-6 text-sm text-slate-600 grid gap-2">
-        <li>✓ Montagem e desmontagem rápida</li>
-        <li>✓ Kits temáticos e peças autorais</li>
-        <li>✓ Atendimento via WhatsApp</li>
-      </ul>
-    </div>
-    <div class="hidden md:block"></div>
-  </div>
-</section>
-
-<section id="servicos" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-  <div class="text-center max-w-2xl mx-auto fade-in">
-    <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Serviços</h2>
-    <p class="mt-3 text-slate-600">Soluções sob medida para cada ocasião.</p>
-  </div>
-  <div class="mt-10 grid md:grid-cols-3 gap-6">
-    <article class="bg-white rounded-2xl p-6 shadow-soft fade-in">
-      <h3 class="font-semibold text-lg flex items-center gap-2"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-rose-500' viewBox='0 0 24 24' fill='currentColor'><path d='M12 21s-6.716-3.568-9.193-7.045C1.335 11.547 2.1 8.5 4.61 7.52c1.632-.64 3.46.05 4.39 1.52.93-1.47 2.758-2.16 4.39-1.52 2.51.98 3.276 4.027 1.803 6.435C18.716 17.432 12 21 12 21z'/></svg>Papelaria personalizada</h3>
-      <p class="mt-2 text-sm text-slate-600">Caixinhas para doces, lembrancinhas, convites, adesivos, toppers e sacolinhas surpresa</p>
-      <ul class="mt-4 text-sm text-slate-600 list-disc pl-5">
-        <li>Artes exclusivas</li><li>Pré-montados</li><li>Adesivos</li><li>Cartão de visita</li>
-      </ul>
-    </article>
-    <article class="bg-white rounded-2xl p-6 shadow-soft fade-in">
-      <h3 class="font-semibold text-lg flex items-center gap-2"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-rose-500' viewBox='0 0 24 24' fill='currentColor'><path d='M20 7l-8 5-8-5 8-5 8 5zm0 4.236v5.382L12 22l-8-5.382V11.24l8 5.001 8-5.005z'/></svg>Decoração de Festas</h3>
-      <p class="mt-2 text-sm text-slate-600">Cenografia, flores, balões e painéis autorais para aniversários, chás e mini weddings.</p>
-      <ul class="mt-4 text-sm text-slate-600 list-disc pl-5">
-        <li>Layout 2D do espaço</li><li>Montagem técnica</li>
-      </ul>
-    </article>
-    <article class="bg-white rounded-2xl p-6 shadow-soft fade-in">
-      <h3 class="font-semibold text-lg flex items-center gap-2"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 text-rose-500' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2l4 4-8 8-4-4 8-8zm6.586 6.586l-8 8L7 22l5.414-3.586 8-8L18.586 8.586z'/></svg>Locação de Peças</h3>
-      <p class="mt-2 text-sm text-slate-600">Acervo com peças exclusivas para compor sua produção com personalidade.</p>
-      <ul class="mt-4 text-sm text-slate-600 list-disc pl-5">
-        <li>Catálogo atualizado</li><li>Retirada ou entrega</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<section id="dicas" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-  <div class="text-center max-w-3xl mx-auto">
-    <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Veja como é simples</h2>
-    <p class="mt-2 text-rose-700/80">Siga o passo a passo e garanta sua data ♥</p>
-  </div>
-  <ol class="mt-10 space-y-6">
-    <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
-      <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">1</span>
-      <p class="text-slate-700">Mande um WhatsApp e verifique se a <strong>data está disponível</strong>.</p>
-    </li>
-    <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
-      <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">2</span>
-      <p class="text-slate-700">Informe o <strong>tema</strong> e o <strong>pacote</strong> que deseja contratar.</p>
-    </li>
-    <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
-      <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">3</span>
-      <p class="text-slate-700">Confirme o pedido mediante <strong>pagamento de 50%</strong>.</p>
-    </li>
-    <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
-      <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">4</span>
-      <p class="text-slate-700">Agende o <strong>horário de retirada</strong> e assinamos o contrato.</p>
-    </li>
-    <li class="bg-white rounded-2xl p-5 shadow-soft border border-rose-100 flex gap-4 items-start">
-      <span class="shrink-0 h-12 w-12 rounded-full grid place-items-center text-xl font-bold text-white bg-rose-500 shadow-[8px_8px_0_0_rgba(244,114,182,0.25)]">5</span>
-      <p class="text-slate-700">Precisa de <strong>frete</strong>? Fale com a gente — temos taxas para transporte.</p>
-    </li>
-  </ol>
-</section>
-
-<section id="ofertas" class="bg-rose-50/60">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-    <div class="text-center max-w-3xl mx-auto">
-      <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Pacotes disponíveis</h2>
-      <p class="mt-2 text-rose-700/80">Escolha o seu e peça pelo WhatsApp</p>
-    </div>
-    <div class="mt-10 grid md:grid-cols-2 gap-6">
-      <article class="bg-white rounded-2xl p-6 shadow-soft border-2 border-rose-200">
-        <header class="flex items-center justify-between">
-          <h3 class="text-2xl font-bold text-rose-700">Básico</h3>
-          <div class="rounded-xl px-3 py-1 text-sm bg-rose-50 text-rose-700 border border-rose-200">Oferta</div>
-        </header>
-        <ul class="mt-4 space-y-2 text-slate-700">
-          <li>1 Painel com balões</li><li>1 Boleira</li><li>1 Mesinha pra doces</li><li>1 Vaso de flor</li><li>1 Bandeja grande</li><li>1 Bandeja pequena</li>
-        </ul>
-        <div class="mt-6 flex items-end gap-2">
-          <span class="text-sm text-slate-500">R$</span><span class="text-4xl font-extrabold text-rose-700 leading-none">69</span><span class="text-sm text-slate-500">,00</span>
+    <!-- Hero -->
+    <section class="relative h-screen min-h-[650px] flex items-center overflow-hidden">
+        <img src="https://www.lindaarteatelie.com.br/IMGS/IMG_01.jpg" alt="Mesa posta elegante"
+            class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="max-w-3xl text-white fade-in">
+                <h1 class="font-serif text-5xl lg:text-7xl leading-tight">Festa na Mesa</h1>
+                <p class="mt-6 text-xl lg:text-2xl opacity-90">Decoração personalizada e locação de peças exclusivas
+                    para eventos inesquecíveis.</p>
+                <div class="mt-12 flex flex-wrap gap-6">
+                    <a href="#contato" class="btn-primary px-9 py-5 rounded-full text-lg font-semibold shadow-xl">Pedir
+                        orçamento</a>
+                    <a href="#galeria" class="btn-secondary px-9 py-5 rounded-full text-lg font-semibold">Ver
+                        projetos</a>
+                </div>
+                <ul class="mt-10 text-lg opacity-80 space-y-3">
+                    <li>✓ Montagem e desmontagem rápida</li>
+                    <li>✓ Kits temáticos e peças autorais</li>
+                    <li>✓ Atendimento via WhatsApp</li>
+                </ul>
+            </div>
         </div>
-        <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Olá!%20Quero%20o%20Pacote%20Básico%20(69,00)." target="_blank" rel="noopener"
-           class="mt-4 inline-flex items-center justify-center w-full rounded-xl bg-rose-600 text-white py-2.5 font-semibold hover:opacity-90">Pedir no WhatsApp</a>
-      </article>
+    </section>
 
-      <article class="bg-white rounded-2xl p-6 shadow-soft border-2 border-rose-200">
-        <header class="flex items-center justify-between">
-          <h3 class="text-2xl font-bold text-rose-700">Completo</h3>
-          <div class="rounded-xl px-3 py-1 text-sm bg-rose-50 text-rose-700 border border-rose-200">Melhor custo-benefício</div>
-        </header>
-        <ul class="mt-4 space-y-2 text-slate-700">
-          <li>1 Mesa cavalete</li><li>1 Painel com balões</li><li>1 Boleira</li><li>1 Mesinha pra doces</li><li>1 Vaso de flor</li><li>1 Bandeja grande</li><li>1 Bandeja pequena</li>
-        </ul>
-        <div class="mt-6 flex items-end gap-2">
-          <span class="text-sm text-slate-500">R$</span><span class="text-4xl font-extrabold text-rose-700 leading-none">89</span><span class="text-sm text-slate-500">,00</span>
+    <!-- Serviços -->
+    <section id="servicos" class="py-24 bg-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl lg:text-5xl text-primary-700">Nossos Serviços</h2>
+                <p class="mt-4 text-xl text-slate-600">Soluções exclusivas para cada ocasião</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-3xl p-10 shadow-soft card-hover fade-in">
+                    <i class="bi bi-gift-fill text-primary-500 text-6xl mb-6"></i>
+                    <h3 class="font-serif text-2xl text-primary-700 mb-4">Papelaria Personalizada</h3>
+                    <p class="text-slate-600 mb-6">Caixinhas para doces, lembrancinhas, convites, adesivos, toppers e
+                        sacolinhas surpresa.</p>
+                    <ul class="text-slate-600 space-y-2 text-sm">
+                        <li>• Artes exclusivas</li>
+                        <li>• Pré-montados</li>
+                        <li>• Adesivos</li>
+                        <li>• Cartão de visita</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-3xl p-10 shadow-soft card-hover fade-in">
+                    <i class="bi bi-balloon-heart-fill text-primary-500 text-6xl mb-6"></i>
+                    <h3 class="font-serif text-2xl text-primary-700 mb-4">Decoração de Festas</h3>
+                    <p class="text-slate-600 mb-6">Cenografia, flores, balões e painéis autorais para aniversários, chás
+                        e mini weddings.</p>
+                    <ul class="text-slate-600 space-y-2 text-sm">
+                        <li>• Layout 2D do espaço</li>
+                        <li>• Montagem técnica</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-3xl p-10 shadow-soft card-hover fade-in">
+                    <i class="bi bi-box-seam-fill text-primary-500 text-6xl mb-6"></i>
+                    <h3 class="font-serif text-2xl text-primary-700 mb-4">Locação de Peças</h3>
+                    <p class="text-slate-600 mb-6">Acervo com peças exclusivas para compor sua produção com
+                        personalidade.</p>
+                    <ul class="text-slate-600 space-y-2 text-sm">
+                        <li>• Catálogo atualizado</li>
+                        <li>• Retirada ou entrega</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Olá!%20Quero%20o%20Pacote%20Completo%20(89,00)." target="_blank" rel="noopener"
-           class="mt-4 inline-flex items-center justify-center w-full rounded-xl bg-rose-600 text-white py-2.5 font-semibold hover:opacity-90">Pedir no WhatsApp</a>
-      </article>
-    </div>
+    </section>
 
-    <div class="mt-12 grid md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-2xl p-6 shadow-soft border border-rose-100">
-        <h4 class="font-semibold text-rose-800">Também fazemos</h4>
-        <ul class="mt-3 text-slate-700 space-y-1">
-          <li>Papelaria personalizada</li><li>Encadernação</li><li>Convite digital</li><li>Topo de bolo</li>
-        </ul>
+    <!-- Passo a passo -->
+    <section id="dicas" class="py-24 bg-gray-50">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl lg:text-5xl text-primary-700">Veja como é simples</h2>
+                <p class="mt-4 text-xl text-primary-600">Siga o passo a passo e garanta sua data ♥</p>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="bg-white rounded-3xl p-8 shadow-soft flex gap-8 fade-in">
+                    <div
+                        class="shrink-0 w-16 h-16 rounded-full bg-primary-500 text-white grid place-items-center text-2xl font-bold shadow-lg">
+                        1</div>
+                    <p class="text-lg text-slate-700 pt-3">Mande um WhatsApp e verifique se a <strong>data está
+                            disponível</strong>.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-soft flex gap-8 fade-in">
+                    <div
+                        class="shrink-0 w-16 h-16 rounded-full bg-primary-500 text-white grid place-items-center text-2xl font-bold shadow-lg">
+                        2</div>
+                    <p class="text-lg text-slate-700 pt-3">Informe o <strong>tema</strong> e o <strong>pacote</strong>
+                        que deseja contratar.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-soft flex gap-8 fade-in">
+                    <div
+                        class="shrink-0 w-16 h-16 rounded-full bg-primary-500 text-white grid place-items-center text-2xl font-bold shadow-lg">
+                        3</div>
+                    <p class="text-lg text-slate-700 pt-3">Confirme o pedido mediante <strong>pagamento de 50%</strong>.
+                    </p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-soft flex gap-8 fade-in">
+                    <div
+                        class="shrink-0 w-16 h-16 rounded-full bg-primary-500 text-white grid place-items-center text-2xl font-bold shadow-lg">
+                        4</div>
+                    <p class="text-lg text-slate-700 pt-3">Agende o <strong>horário de retirada</strong> e assinamos o
+                        contrato.</p>
+                </div>
+                <div class="bg-white rounded-3xl p-8 shadow-soft flex gap-8 fade-in">
+                    <div
+                        class="shrink-0 w-16 h-16 rounded-full bg-primary-500 text-white grid place-items-center text-2xl font-bold shadow-lg">
+                        5</div>
+                    <p class="text-lg text-slate-700 pt-3">Precisa de <strong>frete</strong>? Fale com a gente — temos
+                        taxas para transporte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pacotes -->
+    <section id="ofertas" class="py-24 bg-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl lg:text-5xl text-primary-700">Pacotes disponíveis</h2>
+                <p class="mt-4 text-xl text-slate-600">Escolha o seu e peça pelo WhatsApp</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div
+                    class="bg-gradient-to-br from-primary-50 to-white rounded-3xl p-10 shadow-md border border-primary-200 card-hover fade-in">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="font-serif text-3xl text-primary-700">Básico</h3>
+                        <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">Oferta
+                            especial</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-700 mb-8">
+                        <li>• 1 Painel com balões</li>
+                        <li>• 1 Boleira</li>
+                        <li>• 1 Mesinha pra doces</li>
+                        <li>• 1 Vaso de flor</li>
+                        <li>• 1 Bandeja grande</li>
+                        <li>• 1 Bandeja pequena</li>
+                    </ul>
+                    <p class="text-5xl font-bold text-primary-700 mb-8">R$ 69,00</p>
+                    <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Olá!%20Quero%20o%20Pacote%20Básico%20(69,00)."
+                        target="_blank"
+                        class="btn-primary w-full py-4 px-5 rounded-full text-lg font-semibold text-white">Pedir no
+                        WhatsApp</a>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-primary-50 to-white rounded-3xl p-10 shadow-md border border-primary-200 card-hover fade-in">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="font-serif text-3xl text-primary-700">Completo</h3>
+                        <span class="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">Melhor
+                            custo-benefício</span>
+                    </div>
+                    <ul class="space-y-3 text-slate-700 mb-8">
+                        <li>• 1 Mesa cavalete</li>
+                        <li>• 1 Painel com balões</li>
+                        <li>• 1 Boleira</li>
+                        <li>• 1 Mesinha pra doces</li>
+                        <li>• 1 Vaso de flor</li>
+                        <li>• 1 Bandeja grande</li>
+                        <li>• 1 Bandeja pequena</li>
+                    </ul>
+                    <p class="text-5xl font-bold text-primary-700 mb-8">R$ 89,00</p>
+                    <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Olá!%20Quero%20o%20Pacote%20Completo%20(89,00)."
+                        target="_blank"
+                        class="btn-primary w-full py-4 px-5 rounded-full text-lg font-semibold text-white">Pedir no
+                        WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 fade-in">
+                <div class="bg-primary-50 rounded-3xl p-8">
+                    <h4 class="font-serif text-xl text-primary-700 mb-4">Também fazemos</h4>
+                    <ul class="space-y-2 text-slate-700">
+                        <li>• Papelaria personalizada</li>
+                        <li>• Encadernação</li>
+                        <li>• Convite digital</li>
+                        <li>• Topo de bolo</li>
+                    </ul>
+                </div>
+                <div class="bg-primary-50 rounded-3xl p-8">
+                    <h4 class="font-serif text-xl text-primary-700 mb-4">Dica rápida</h4>
+                    <p class="text-slate-700">Para mesversário do bebê, montamos <strong>pacotes especiais</strong>
+                        combinando tema, mesa posta e papelaria.</p>
+                </div>
+                <div class="bg-primary-50 rounded-3xl p-8">
+                    <h4 class="font-serif text-xl text-primary-700 mb-4">Fale com a gente</h4>
+                    <p class="text-slate-700 mb-4">Tem dúvidas sobre tema, frete ou montagem?</p>
+                    <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Olá!%20Quero%20tirar%20uma%20dúvida%20sobre%20os%20pacotes."
+                        target="_blank" class="btn-primary px-6 py-3 rounded-full font-semibold text-white">Abrir
+                        WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="py-24 bg-gray-50">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl lg:text-5xl text-primary-700">Galeria</h2>
+                <p class="mt-4 text-xl text-slate-600">Alguns registros de composições & detalhes</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in">
+                <img src="https://www.lindaarteatelie.com.br/IMGS/image_3.jpg" alt="Festa na mesa"
+                    class="rounded-2xl object-cover h-80 w-full shadow-md hover:shadow-xl transition" loading="lazy">
+                <img src="https://www.lindaarteatelie.com.br/IMGS/image_4.jpg" alt="Decoração de mini festa"
+                    class="rounded-2xl object-cover h-80 w-full shadow-md hover:shadow-xl transition" loading="lazy">
+                <img src="https://www.lindaarteatelie.com.br/IMGS/image_2.jpg" alt="Papelaria personalizada"
+                    class="rounded-2xl object-cover h-80 w-full shadow-md hover:shadow-xl transition" loading="lazy">
+                <img src="https://www.lindaarteatelie.com.br/IMGS/image_1.jpg" alt="Personalizados de festa"
+                    class="rounded-2xl object-cover h-80 w-full shadow-md hover:shadow-xl transition" loading="lazy">
+            </div>
+            <div class="text-center mt-12 fade-in">
+                <a href="#contato"
+                    class="btn-primary px-9 py-5 rounded-full text-lg font-semibold shadow-xl text-white">Quero um
+                    orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-24 bg-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <h2 class="font-serif text-4xl lg:text-5xl text-primary-700 mb-8">Sobre o Ateliê</h2>
+                    <p class="text-lg text-slate-700 mb-8">Somos um estúdio criativo apaixonado por composições que
+                        contam histórias. Do briefing ao último detalhe, entregamos experiências com curadoria, técnica
+                        e afeto.</p>
+                    <ul class="space-y-4 text-lg text-slate-700">
+                        <li>• Atendimento personalizado</li>
+                        <li>• Portfolio autoral & peças exclusivas</li>
+                        <li>• Logística ágil e montagem profissional</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-3xl p-10 shadow-soft fade-in">
+                    <h3 class="font-serif text-2xl text-primary-700 mb-6">Perguntas frequentes</h3>
+                    <details class="group mb-4">
+                        <summary
+                            class="cursor-pointer text-lg font-medium text-slate-800 flex justify-between items-center">
+                            Como funciona o orçamento?<i
+                                class="bi bi-plus-lg text-primary-500 text-xl group-open:rotate-45 transition"></i>
+                        </summary>
+                        <p class="mt-3 text-slate-600">Enviamos uma proposta baseada no briefing (tema, data, local,
+                            itens de locação). Após aprovação, agendamos e confirmamos o evento.</p>
+                    </details>
+                    <details class="group mb-4">
+                        <summary
+                            class="cursor-pointer text-lg font-medium text-slate-800 flex justify-between items-center">
+                            Atendem fora da cidade?<i
+                                class="bi bi-plus-lg text-primary-500 text-xl group-open:rotate-45 transition"></i>
+                        </summary>
+                        <p class="mt-3 text-slate-600">Sim! Consultar taxa de deslocamento e disponibilidade de agenda.
+                        </p>
+                    </details>
+                    <details class="group">
+                        <summary
+                            class="cursor-pointer text-lg font-medium text-slate-800 flex justify-between items-center">
+                            Posso alugar só as peças?<i
+                                class="bi bi-plus-lg text-primary-500 text-xl group-open:rotate-45 transition"></i>
+                        </summary>
+                        <p class="mt-3 text-slate-600">Claro. Oferecemos locação unitária com retirada ou entrega
+                            programada.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contato -->
+    <section id="contato" class="py-24 bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in">
+                    <h2 class="font-serif text-4xl lg:text-5xl mb-6">Vamos planejar sua festa?</h2>
+                    <p class="text-xl opacity-90 mb-10">Fale com a gente no WhatsApp e receba seu orçamento ainda hoje.
+                    </p>
+                    <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20mesa%20posta/decora%C3%A7%C3%A3o."
+                        target="_blank"
+                        class="btn-secondary text-primary-600 bg-white px-9 py-5 rounded-full text-lg font-semibold shadow-xl inline-block">Abrir
+                        WhatsApp</a>
+                </div>
+                <form class="bg-white/10 backdrop-blur rounded-3xl p-10 shadow-xl fade-in"
+                    onsubmit="event.preventDefault(); window.open('https://web.whatsapp.com/send?phone=5524999995793&text=' + encodeURIComponent('Olá! Meu nome é ' + this.nome.value + ' — Evento em ' + this.data.value + ' para ' + this.pessoas.value + ' pessoas. Tema: ' + this.tema.value));">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Seu nome</label>
+                            <input name="nome" required
+                                class="w-full px-5 py-4 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:border-white focus:outline-none"
+                                placeholder="Nome completo" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Data do evento</label>
+                            <input name="data" type="date" required
+                                class="w-full px-5 py-4 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:border-white focus:outline-none" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Qtd. de pessoas</label>
+                            <input name="pessoas" type="number" min="1"
+                                class="w-full px-5 py-4 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:border-white focus:outline-none"
+                                placeholder="Ex.: 30" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Tema</label>
+                            <input name="tema"
+                                class="w-full px-5 py-4 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:border-white focus:outline-none"
+                                placeholder="Ex.: Botânico, Minimalista..." />
+                        </div>
+                    </div>
+                    <button type="submit"
+                        class="btn-secondary bg-white text-primary-600 w-full mt-8 py-5 rounded-full text-lg font-semibold shadow-xl">Enviar
+                        no WhatsApp</button>
+                    <p class="text-sm opacity-70 mt-4">Ao enviar, você será redirecionado ao WhatsApp com a mensagem
+                        preenchida.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-24 bg-white">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <h2 class="font-serif text-4xl lg:text-5xl text-primary-700">Blog & Inspirações</h2>
+        <p class="mt-4 text-xl text-slate-600">Dicas práticas, guias e tendências para suas festas</p>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-soft border border-rose-100">
-        <h4 class="font-semibold text-rose-800">Dica rápida</h4>
-        <p class="mt-2 text-slate-700">Para mesversário do bebê, montamos <strong>pacotes especiais</strong> combinando tema, mesa posta e papelaria.</p>
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Post 1: Chá de Bebê -->
+        <a href="/blog/ideias-mesa-posta-cha-bebe-2026.html" class="block card-hover rounded-3xl overflow-hidden shadow-soft bg-white fade-in">
+          <img src="./IMGS/BLOG-CHA-BEBE-COVER.jpg" alt="Mesa posta para chá de bebê 2026" class="w-full h-64 object-cover" loading="lazy" />
+          <div class="p-8">
+            <span class="text-sm text-primary-600">Tendências • 14 fev 2026</span>
+            <h3 class="font-serif text-2xl text-primary-700 mt-3 mb-4">10 Ideias de Mesa Posta para Chá de Bebê em 2026</h3>
+            <p class="text-slate-600">Temas modernos, paletas neutras e dicas para um chá de bebê perfeito.</p>
+          </div>
+        </a>
+
+        <!-- Post 2: Festa Infantil -->
+        <a href="/blog/temas-festa-infantil-2026.html" class="block card-hover rounded-3xl overflow-hidden shadow-soft bg-white fade-in">
+          <img src="./IMGS/BLOG-FESTA-INFANTIL-COVER.jpg" alt="Temas de festa infantil 2026" class="w-full h-64 object-cover" loading="lazy" />
+          <div class="p-8">
+            <span class="text-sm text-primary-600">Tendências • 01 mar 2026</span>
+            <h3 class="font-serif text-2xl text-primary-700 mt-3 mb-4">10 Temas de Festa Infantil para 2026</h3>
+            <p class="text-slate-600">Unicórnio, dinossauro, super-heróis e mais ideias incríveis.</p>
+          </div>
+        </a>
+
+        <!-- Post 3: Guia Completo -->
+        <a href="/blog/guia-festa-mesa-posta-decoracao-locacao.html" class="block card-hover rounded-3xl overflow-hidden shadow-soft bg-white fade-in">
+          <img src="./IMGS/BLOG-MESA-POSTA.jpg" alt="Guia completo de planejamento de festas" class="w-full h-64 object-cover" loading="lazy" />
+          <div class="p-8">
+            <span class="text-sm text-primary-600">Guia • 29 out 2025</span>
+            <h3 class="font-serif text-2xl text-primary-700 mt-3 mb-4">Guia Completo para Planejar Sua Festa</h3>
+            <p class="text-slate-600">Mesa posta, decoração, locação e checklists práticos.</p>
+          </div>
+        </a>
       </div>
-      <div class="bg-white rounded-2xl p-6 shadow-soft border border-rose-100">
-        <h4 class="font-semibold text-rose-800">Fale com a gente</h4>
-        <p class="mt-2 text-slate-700">Tem dúvidas sobre tema, frete ou montagem?</p>
-        <a href="https://web.whatsapp.com/send?phone=5524999995793&text=Olá!%20Quero%20tirar%20uma%20dúvida%20sobre%20os%20pacotes." target="_blank" rel="noopener"
-           class="mt-3 inline-flex items-center gap-2 rounded-xl bg-rose-600 text-white px-4 py-2 font-semibold hover:opacity-90">Abrir WhatsApp</a>
+
+      <div class="text-center mt-12 fade-in">
+        <a href="/blog" class="btn-primary px-9 py-5 rounded-full text-lg font-semibold shadow-xl text-white">Ver todos os posts do blog</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="galeria" class="bg-white relative">
-  <div class="pointer-events-none absolute -top-8 -left-8 w-40 h-40 bg-rose-200 opacity-60 blur-2xl rounded-full"></div>
-  <div class="pointer-events-none absolute -bottom-10 -right-10 w-52 h-52 bg-rose-300 opacity-60 blur-2xl rounded-full" style="z-index:-1; left: 0"></div>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-    <div class="text-center max-w-2xl mx-auto fade-in">
-      <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Galeria</h2>
-      <p class="mt-3 text-slate-600">Alguns registros de composições & detalhes.</p>
+    <!-- Footer com seção Blog -->
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-sm">
+                <div>
+                    <p class="font-serif text-2xl text-primary-700">Linda Arte Ateliê</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-slate-800 mb-3">Atendimento</p>
+                    <p class="text-slate-600">contato@lindaarteatelie.com.br</p>
+                    <a href="https://web.whatsapp.com/send?phone=5524999995793" target="_blank"
+                        class="block mt-2 text-slate-600 hover:text-primary-600">WhatsApp: +55 (24) 9 9999-5793</a>
+                </div>
+                <div>
+                    <p class="font-semibold text-slate-800 mb-3">Redes</p>
+                    <a href="https://www.instagram.com/festanamesavoltaredonda"
+                        class="block text-slate-600 hover:text-primary-600">Instagram</a>
+                </div>
+                <div>
+                    <p class="font-semibold text-slate-800 mb-3">Blog</p>
+                    <a href="./blog/guia-festa-mesa-posta-decoracao-locacao.html"
+                        class="block mt-2 text-slate-600 hover:text-primary-600">Guia completo: Festa, Mesa Posta &
+                        Locação</a>
+                    <a href="#" class="block mt-2 text-slate-600 hover:text-primary-600">Tendências de decoração
+                        2024</a>
+                    <a href="#" class="block mt-2 text-slate-600 hover:text-primary-600">Dicas para mesversário
+                        perfeito</a>
+                </div>
+            </div>
+            <p class="text-center text-xs text-slate-500 mt-10">© <span id="year"></span> Linda Arte Ateliê. Todos os
+                direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Bubble com ícone Bootstrap -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://web.whatsapp.com/send?phone=5524999995793" target="_blank"
+            class="bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-2xl hover:scale-110 transition">
+            <i class="bi bi-whatsapp text-4xl"></i>
+        </a>
     </div>
 
-    <div class="mt-10 grid-auto-fit" id="galeria-rotativa">
-      <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
-        <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_3.jpg" alt="Festa na mesa" />
-      </figure>
-      <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
-        <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_4.jpg" alt="Decoração de mini festa" />
-      </figure>
-      <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
-        <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_2.jpg" alt="Papelaria personalizada" />
-      </figure>
-      <figure class="overflow-hidden rounded-2xl shadow-soft fade-in">
-        <img class="w-full h-72 object-cover lazy" data-src="./IMGS/image_1.jpg" alt="Personalizados de festa" />
-      </figure>
-    </div>
+    <!-- Scripts -->
+    <script>
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    <div class="text-center mt-10">
-      <a href="#contato" class="button-cta bg-rose-600 text-white hover:opacity-90">Quero um orçamento</a>
-    </div>
-  </div>
-</section>
+        // Ano atual no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
-<section id="sobre" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-  <div class="grid md:grid-cols-2 gap-10 items-center">
-    <div class="fade-in">
-      <h2 class="font-serif text-3xl md:text-4xl text-rose-900">Sobre o Ateliê</h2>
-      <p class="mt-4 text-slate-700">Somos um estúdio criativo apaixonado por composições que contam histórias. Do briefing ao último detalhe, entregamos experiências com curadoria, técnica e afeto.</p>
-      <ul class="mt-6 space-y-3 text-slate-700">
-        <li>• Atendimento personalizado</li>
-        <li>• Portfolio autoral & peças exclusivas</li>
-        <li>• Logística ágil e montagem profissional</li>
-      </ul>
-    </div>
-    <div class="bg-white rounded-2xl p-6 shadow-soft fade-in">
-      <h3 class="font-semibold">Perguntas frequentes</h3>
-      <details class="mt-4 border-b py-3">
-        <summary class="cursor-pointer font-medium">Como funciona o orçamento?</summary>
-        <p class="mt-2 text-sm text-slate-600">Enviamos uma proposta baseada no briefing (tema, data, local, itens de locação). Após aprovação, agendamos e confirmamos o evento.</p>
-      </details>
-      <details class="border-b py-3">
-        <summary class="cursor-pointer font-medium">Atendem fora da cidade?</summary>
-        <p class="mt-2 text-sm text-slate-600">Sim! Consultar taxa de deslocamento e disponibilidade de agenda.</p>
-      </details>
-      <details class="py-3">
-        <summary class="cursor-pointer font-medium">Posso alugar só as peças?</summary>
-        <p class="mt-2 text-sm text-slate-600">Claro. Oferecemos locação unitária com retirada ou entrega programada.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section id="contato" class="relative bg-gradient-to-br from-rose-600 via-rose-500 to-rose-400 text-white">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center">
-    <div class="fade-in">
-      <h2 class="font-serif text-3xl md:text-4xl">Vamos planejar sua festa?</h2>
-      <p class="mt-3 text-white/80">Fale com a gente no WhatsApp e receba seu orçamento ainda hoje.</p>
-      <a class="button-cta mt-6 inline-flex items-center gap-2 bg-white text-rose-900 hover:opacity-90" href="https://web.whatsapp.com/send?phone=5524999995793&text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20para%20mesa%20posta/decora%C3%A7%C3%A3o." target="_blank" rel="noopener">Abrir WhatsApp</a>
-    </div>
-    <form class="bg-white/10 glass rounded-2xl p-6 shadow-soft fade-in" onsubmit="event.preventDefault(); window.location='https://web.whatsapp.com/send?phone=5524999995793&text=' + encodeURIComponent('Olá! Meu nome é ' + this.nome.value + ' — Evento em ' + this.data.value + ' para ' + this.pessoas.value + ' pessoas. Tema: ' + this.tema.value) ;">
-      <div class="grid md:grid-cols-2 gap-4">
-        <div><label class="text-sm">Seu nome</label><input name="nome" required class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" placeholder="Nome completo"/></div>
-        <div><label class="text-sm">Data do evento</label><input name="data" type="date" required class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" /></div>
-        <div><label class="text-sm">Qtd. de pessoas</label><input name="pessoas" type="number" min="1" class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" placeholder="Ex.: 30" /></div>
-        <div><label class="text-sm">Tema</label><input name="tema" class="mt-1 w-full rounded-xl bg-white/90 text-slate-800 px-3 py-2" placeholder="Ex.: Botânico, Minimalista..." /></div>
-      </div>
-      <button type="submit" class="button-cta w-full mt-4 bg-white text-rose-900 hover:opacity-90">Enviar no WhatsApp</button>
-      <p class="mt-3 text-xs text-white/70">Ao enviar, você será redirecionado ao WhatsApp com a mensagem preenchida.</p>
-    </form>
-  </div>
-</section>
-
-<footer class="bg-white border-t border-slate-200">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8 text-sm">
-    <div><p class="font-serif text-lg text-rose-900">Linda Arte Ateliê </p></div>
-    <div>
-      <p class="font-semibold">Atendimento</p>
-      <p class="mt-2 text-slate-600">contato@lindaarteatelie.com.br</p>
-      <a class="block mt-2 hover:text-rose-900" href="https://web.whatsapp.com/send?phone=5524999995793" target="_blank" rel="noopener">WhatsApp: +55 (24) 9 9999-5793</a>
-    </div>
-    <div>
-      <p class="font-semibold">Redes</p>
-      <a class="block mt-2 hover:text-rose-900" href="https://www.instagram.com/festanamesavoltaredonda" aria-label="Instagram">Instagram</a>
-    </div>
-  </div>
-  <div class="text-center text-xs text-slate-500 pb-8">© <span id="year"></span> Linda Arte Ateliê. Todos os direitos reservados.</div>
-</footer>
-
-<!-- Bubble WhatsApp -->
-<div class="whatsapp-bubble animate-bounce">
-  <button id="wa-bubble" aria-label="Abrir chat WhatsApp" class="h-14 w-14 rounded-full shadow-soft grid place-items-center bg-green-500 ring-4 ring-rose-300 hover:brightness-110" title="Fale conosco no WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7 text-white"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.06 0C5.7 0 .54 5.16.54 11.52c0 2.03.53 4.03 1.54 5.8L0 24l6.83-2.03a11.6 11.6 0 0 0 5.23 1.26h.01c6.36 0 11.52-5.16 11.52-11.52 0-3.08-1.2-5.98-3.07-8.23zM12.06 21.2h-.01a9.7 9.7 0 0 1-4.96-1.36l-.35-.2-4.06 1.21 1.2-3.95-.23-.37a9.67 9.67 0 0 1-1.49-5.01c0-5.36 4.36-9.72 9.73-9.72 2.6 0 5.04 1.01 6.87 2.84a9.67 9.67 0 0 1 2.85 6.88c0 5.37-4.36 9.68-9.55 9.68zm5.42-7.27c-.29-.15-1.73-.86-2-.96-.26-.1-.45-.15-.65.15-.19.29-.75.96-.92 1.16-.17.19-.34.22-.63.08-.29-.15-1.23-.45-2.34-1.42-.86-.76-1.45-1.7-1.62-1.98-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.65-1.56-.9-2.13-.24-.58-.48-.5-.65-.5-.17 0-.36-.02-.55-.02s-.5.07-.77.36c-.26.29-1.01.98-1.01 2.39 0 1.4 1.04 2.75 1.19 2.94.15.19 2.05 3.14 4.95 4.41.69.3 1.22.48 1.64.62.69.22 1.32.19 1.82.12.56-.08 1.73-.71 1.98-1.4.24-.69.24-1.28.17-1.4-.07-.12-.26-.19-.55-.34z"/></svg>
-  </button>
-</div>
-
-<!-- Painel WhatsApp -->
-<div id="wa-panel" class="whatsapp-panel hidden bg-white shadow-soft">
-  <div class="p-4 border-b flex items-center justify-between">
-    <div><p class="font-semibold">Fale com o Ateliê</p><p class="text-xs text-slate-500">Resposta rápida • WhatsApp</p></div>
-    <button id="wa-close" aria-label="Fechar" class="p-2 rounded-lg hover:bg-slate-100">✕</button>
-  </div>
-  <div class="p-4 space-y-3 text-sm max-h-[48vh] overflow-y-auto">
-    <div class="bg-slate-50 rounded-xl p-3">Olá! Posso te ajudar com orçamento, disponibilidade e opções de temas. Escolha uma opção:</div>
-    <div class="flex flex-wrap gap-2">
-      <button class="px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 wa-q" data-q="Olá! Quero orçamento para mesa posta.">Orçamento</button>
-      <button class="px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 wa-q" data-q="Olá! Gostaria de saber datas disponíveis.">Disponibilidade</button>
-      <button class="px-3 py-2 rounded-full bg-green-50 text-green-700 border border-green-200 wa-q" data-q="Quais temas vocês recomendam para o meu evento?">Temas</button>
-    </div>
-  </div>
-  <div class="p-4 border-t bg-slate-50 flex gap-2">
-    <input id="wa-input" disabled class="flex-1 bg-white rounded-xl px-3 py-2 opacity-60 cursor-not-allowed" placeholder="Use as opções acima…" />
-    <button id="wa-send" class="px-4 rounded-xl bg-green-500 text-white hidden">Enviar</button>
-  </div>
-</div>
-
-<!-- Overlay de neve + Popup de Natal -->
-<div id="snow" class="snow-overlay" aria-hidden="true"></div>
-<div id="xmas-offer" class="fixed inset-0 z-[70] hidden" aria-hidden="true">
-  <div class="absolute inset-0 bg-black/50"></div>
-  <div role="dialog" aria-modal="true" aria-labelledby="xmas-offer-title" class="relative mx-auto max-w-md w-[92%] mt-24 rounded-2xl overflow-hidden shadow-2xl">
-    <div class="h-2 bg-gradient-to-r from-rose-700 via-yellow-400 to-emerald-700"></div>
-    <div class="bg-white p-5 md:p-6 relative">
-      <button id="xmas-offer-close" aria-label="Fechar" class="absolute right-3 top-3 rounded-lg p-2 hover:bg-slate-100">✕</button>
-      <div class="flex items-center gap-3"><span class="text-2xl">🎄</span><h3 id="xmas-offer-title" class="font-serif text-2xl text-rose-900">Especial de Natal</h3></div>
-      <p class="mt-2 text-slate-700">Ganhe <b>5% OFF</b> na locação de peças para eventos confirmados até <span class="underline decoration-rose-300" id="xmas-deadline"></span>.</p>
-      <div class="mt-4 flex items-stretch gap-2">
-        <code id="xmas-coupon" class="flex-1 grid place-items-center rounded-xl border border-rose-200 bg-rose-50 text-rose-800 font-semibold px-3 py-2">NATAL5</code>
-        <button id="xmas-copy" class="rounded-xl px-3 py-2 bg-rose-600 text-white font-semibold hover:opacity-90">Copiar</button>
-      </div>
-      <p class="mt-2 text-xs text-slate-500">Mostre este cupom no WhatsApp para aplicar o desconto.</p>
-      <a id="xmas-wa" target="_blank" rel="noopener" class="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 text-white py-3 font-semibold hover:opacity-95">
-        Pedir orçamento com desconto
-      </a>
-      <ul class="mt-4 text-xs text-slate-500 list-disc pl-5 space-y-1">
-        <li>Válido para novas reservas realizadas no período da campanha.</li>
-        <li>Desconto aplicado no fechamento do pedido mediante disponibilidade de agenda.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- JS modular (compartilhado) -->
-<script type="module" src="/assets/js/core.js"></script>
-<script type="module" src="/assets/js/gallery-rotator.js"></script>
-<script type="module" src="/assets/js/whatsapp-bot.js"></script>
-<script type="module" src="/assets/js/xmas-offer.js"></script>
+    <!-- Seus scripts originais (se precisar) -->
+    <script type="module" src="/assets/js/core.js"></script>
+    <script type="module" src="/assets/js/gallery-rotator.js"></script>
+    <script type="module" src="/assets/js/whatsapp-bot.js"></script>
+    <script type="module" src="/assets/js/xmas-offer.js"></script>
 </body>
+
 </html>
