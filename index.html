@@ -357,30 +357,35 @@
     </div>
 </section>
 
-    <!-- Galeria -->
-    <section id="galeria" class="py-24 bg-gray-50">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="font-serif text-4xl lg:text-5xl text-primary-700">Galeria</h2>
-                <p class="mt-4 text-xl text-slate-600">Alguns registros de composições & detalhes</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in">
-                <img src="https://www.lindaarteatelie.com.br/IMGS/image_3.jpg" alt="Festa na mesa"
-                    class="rounded-2xl object-cover h-80 w-full shadow-md hover:shadow-xl transition" loading="lazy">
-                <img src="https://www.lindaarteatelie.com.br/IMGS/image_4.jpg" alt="Decoração de mini festa"
-                    class="rounded-2xl object-cover h-80 w-full shadow-md hover:shadow-xl transition" loading="lazy">
-                <img src="https://www.lindaarteatelie.com.br/IMGS/image_2.jpg" alt="Papelaria personalizada"
-                    class="rounded-2xl object-cover h-80 w-full shadow-md hover:shadow-xl transition" loading="lazy">
-                <img src="https://www.lindaarteatelie.com.br/IMGS/image_1.jpg" alt="Personalizados de festa"
-                    class="rounded-2xl object-cover h-80 w-full shadow-md hover:shadow-xl transition" loading="lazy">
-            </div>
-            <div class="text-center mt-12 fade-in">
-                <a href="#contato"
-                    class="btn-primary px-9 py-5 rounded-full text-lg font-semibold shadow-xl text-white">Quero um
-                    orçamento</a>
-            </div>
+    <!-- Galeria com rotator funcionando -->
+<section id="galeria" class="py-24 bg-gray-50">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="font-serif text-4xl lg:text-5xl text-primary-700">Galeria</h2>
+            <p class="mt-4 text-xl text-slate-600">Alguns registros de composições & detalhes</p>
         </div>
-    </section>
+
+        <!-- Container do rotator -->
+        <div id="galeria-rotativa" class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in">
+            <figure class="overflow-hidden rounded-2xl shadow-soft">
+                <img class="w-full h-80 object-cover lazy" data-src="https://www.lindaarteatelie.com.br/IMGS/image_1.jpg" alt="Projeto 1 - Mesa posta elegante" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl shadow-soft">
+                <img class="w-full h-80 object-cover lazy" data-src="https://www.lindaarteatelie.com.br/IMGS/image_2.jpg" alt="Projeto 2 - Decoração temática" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl shadow-soft">
+                <img class="w-full h-80 object-cover lazy" data-src="https://www.lindaarteatelie.com.br/IMGS/image_3.jpg" alt="Projeto 3 - Chá de bebê" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl shadow-soft">
+                <img class="w-full h-80 object-cover lazy" data-src="https://www.lindaarteatelie.com.br/IMGS/image_4.jpg" alt="Projeto 4 - Aniversário infantil" />
+            </figure>
+        </div>
+
+        <div class="text-center mt-12 fade-in">
+            <a href="#contato" class="btn-primary px-9 py-5 rounded-full text-lg font-semibold shadow-xl text-white">Quero um orçamento</a>
+        </div>
+    </div>
+</section>
 
     <!-- Sobre -->
     <section id="sobre" class="py-24 bg-white">
